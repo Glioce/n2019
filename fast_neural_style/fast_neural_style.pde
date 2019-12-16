@@ -21,11 +21,16 @@ public void setup() {
   println(Core.VERSION);
   cap = new Capture(this, W, H);
   cap.start();
+  //model = "candy.t7";
   //model = "composition_vii.t7";
+  //model = "feathers.t7";
   //model = "la_muse.t7";
+  //model = "la_muse_norm.t7";
+  model = "mosaic.t7";
   //model = "starry_night.t7";
-  model = "the_wave.t7";
-  //model = "finalized_CNN02.sav";
+  //model = "the_scream.t7";
+  //model = "the_wave.t7";
+  //model = "udnie.t7";
   mean = new Mat(H, W, CvType.CV_8UC3, new Scalar(103.939, 116.779, 123.68));
   net = Dnn.readNetFromTorch(dataPath(model));
   //net = Dnn.readNetFromTensorflow(dataPath(model));
