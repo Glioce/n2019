@@ -18,15 +18,15 @@ CVImage cv;
  }*/
 
 public void setup() {
-  size(320, 240);
+  size(640, 480);
   System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
   println(Core.VERSION);
-  //model = "candy.t7";
+  //model = "candy.t7";           //bueno
   //model = "composition_vii.t7";
-  //model = "feathers.t7";
-  //model = "la_muse.t7";
-  //model = "la_muse_norm.t7";
-  model = "mosaic.t7";
+  model = "feathers.t7";        //bueno
+  //model = "la_muse.t7";         //regular
+  //model = "la_muse_norm.t7";    //regular
+  //model = "mosaic.t7";          //bueno
   //model = "starry_night.t7";
   //model = "the_scream.t7";
   //model = "the_wave.t7";

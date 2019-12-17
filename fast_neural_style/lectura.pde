@@ -2,7 +2,7 @@
 // y la modifica solo una vez.
 
 void setupLectura() {
-  img = loadImage("fotos/pinata_0.jpg"); //cargar imagen
+  img = loadImage("fotos/pinata_0s.jpg"); //cargar imagen
 
   cv = new CVImage(img.width, img.height);
   cv.copyTo(img); //la imagen cargada se copia a un contenedor de tipo CVImage
@@ -10,7 +10,7 @@ void setupLectura() {
   //copiar blob a una matriz
   Mat im = Dnn.blobFromImage(cv.getBGR(), //Mat image 
     1.0, //double scalefactor
-    new Size(cap.width, cap.height), //Size size 
+    new Size(img.width, img.height), //Size size 
     new Scalar(103.939, 116.779, 123.68), //Scalar mean
     false, false);             // boolean swapRB, boolean crop
 
@@ -35,12 +35,14 @@ void setupLectura() {
   Core.add(tmp, mean, tmp);
   cv.copyTo(tmp);
 
+  //borrar todo
   b.release();
   g.release();
   r.release();
   tmp.release();
   out.release();
   im.release();
+  //cv.copyTo(out);
 }
 
 void drawLectura() {
