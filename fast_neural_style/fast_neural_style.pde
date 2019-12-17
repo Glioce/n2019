@@ -21,9 +21,9 @@ public void setup() {
   size(640, 480);
   System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
   println(Core.VERSION);
-  //model = "candy.t7";           //bueno
+  model = "candy.t7";           //bueno
   //model = "composition_vii.t7";
-  model = "feathers.t7";        //bueno
+  //model = "feathers.t7";        //bueno
   //model = "la_muse.t7";         //regular
   //model = "la_muse_norm.t7";    //regular
   //model = "mosaic.t7";          //bueno

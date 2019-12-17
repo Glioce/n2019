@@ -2,7 +2,8 @@
 // y la modifica solo una vez.
 
 void setupLectura() {
-  img = loadImage("fotos/pinata_0s.jpg"); //cargar imagen
+  //img = loadImage("fotos/pinata_0s.jpg"); //cargar imagen
+  img = loadImage("fotos/sprite0s.jpg");
 
   cv = new CVImage(img.width, img.height);
   cv.copyTo(img); //la imagen cargada se copia a un contenedor de tipo CVImage
