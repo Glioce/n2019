@@ -57,21 +57,21 @@ Si el jugador logra destruirla, se convierte en el mejor rompedor de piñatas de
 *Descripción detallada de los controles y las acciones de los personajes.*
 
 ### Exploración del pueblo
-4 botones para desplazamiento: WASD o flechas
-1 botón para interactuar: X o J
-1 botón configurable: ---
-1 botón de pausa: Esc o ---
-1 botón para saltar: ---
+4 botones para desplazamiento: WASD o flechas  
+1 botón para interactuar: X o J  
+1 botón configurable: ---  
+1 botón de pausa: Esc o ---  
+1 botón para saltar: ---  
 
 El desplazamiento también se puede realizar haciendo clic en el escenario.
 Si se hace clic en una zona vacía, el prota se desplaza automáticamente hasta ese punto.
 
 ### Romper piñatas
-Los botones de desplazamiento se usan cambiar el rectángulo en el que se realizará
+Los botones de desplazamiento se usan para cambiar el rectángulo en el que se realizará
 el ataque.
-El botón para interactuar selecciona el rectángulo.
+El botón de interacción selecciona el rectángulo.
 Después los botones de desplazamieto permiten cambiar el ataque o movimiento.
-El botón para interactuar selecciona el ataque o movimiento.
+El botón de interacción selecciona el ataque o movimiento.
 
 ## Gameplay
 *¿Qué elementos enganchan al jugador? División de la secuencia de juego: niveles, rounds, mapas.
@@ -88,7 +88,7 @@ Se podrían marcar los días que pasan.
 Romper piñatas requiere de una estrategia.
 Aparecen 6 rectánglos en los que se mueve la piñata.
 Se debe elegir un rectángulo para lanzar un golpe.
-En el entrenamiento, Aldo no tiene los ojos vendados y puede ver la posición
+En el **entrenamiento**, Aldo no tiene los ojos vendados y puede ver la posición
 de la piñata todo el tiempo.
 Cuando tiene los ojos vendados, la posición de la piñata solo es visible cuando
 se realiza un golpe exitoso.
@@ -111,35 +111,87 @@ una longitud predeterminada (podría depender de la velocidad de ataque).
 Mientras se elije el siguiente movimiento, la barra de tiempo se reduce lentamente
 obligando al jugador a elegir rápido.
 
+**Recolectar dulces**
+Cuando se rompe la piñata caen dulces y el jugador debe presionar varias veces un botón
+lo más rápido que pueda para recolectar la mayor cantidad de dulces.
+La cantidad de dulces recolectados podría servir para determinar el rango del jugador
+al terminar el juego.
+En otras situaciones también se pueden recolectar dulces.
+
 ## Mundo
 *Lugares, ambientes, humores, evocaciones, y su relación con la historia.
 Cómo se conectan los lugares, para esto es bueno usar diagramas.*
 
-El mundo del juego es una ciudad pequeña muy parecida a la vida real, pero puede haber algunos elementos mágicos.
+El mundo del juego es un pueblo pequeño muy parecido a la vida real.
 Hay dos barrios que se pueden explorar: uno al este y el otro al oeste.
 En el centro del pueblo hay un parque y una iglesia.
-También hay un bosque que está cerca del cementerio. En lo profundo del bosque hay una cabaña.
-Tal vez hay una presa y una montaña.
+En el sur hay un bosque de árboles secos y pinos. En lo profundo del bosque hay una cabaña.
+Al norte hay una presa.
 
 ## Interfaz
 *Descripción de los menús. Tipos de música y efectos de sonido. Colores, humor y acuerdos de diseño.*
 
-Evitar HUD.
+Los gráficos del juego son fotografías y dibujos feos que han sido procesados por una
+red neuronal para que parezcan dibujados con acuarela y otros tipos de pintura.
+
+Hay gran diversidad de colores, pero con tendencia al gris y al marron para que parezca que
+el clima es frío y seco, la época es de melancolía y las luces de navidad resalten.
+
+Evitar HUD.  
+
+Al iniciar el ejecutable aparece la pantalla de título (en una esquina aparece el logo de CGM
+adornado con luces de navidad) y un menú con 3 opciones:
++ Jugar
++ Créditos
++ Cerrar
+Al elegir "Jugar" aparece una pantalla de selección con 3 ranuras de juego.
+Elige una para continuar.
+En "Créditos" aparece una lista con información de los recursos utilizados en el juego.
+Al elegir "Cerrar" se cierra la aplicación.
 
 ## Mecánicas y objetos
 *Situaciones y modos de proceder para ganar en el juego. Descripción de los
 objetos que se pueden obtener y crear en el juego, y cómo se pueden usar a
 favor o en contra del jugador y los enemigos. Powerups permanentes y temporales.*
 
-Clic clic.
+El jugador avanza en el juego cuando rompe piñatas (ya se ha repetido muchas veces).
 
-## Enemigos y otras criaturas
+Se pueden coleccionar instrumentos para romper piñatas, adornos para los instrumentos 
+(que mejoran sus atributos), amuletos, que ayudan en varias situaciones y se pueden recolectar
+golosinas (que es como la puntuación global).
+
+### Instrumentos
+1. Palo de Escoba - Bajo poder de ataque y corto alcance. Se podría romper después de varios usos.
+2. Tabla Astillada - Alto poder de ataque, corto alcance y baja velocidad.
+3. Rama Espiral - Bajo poder de ataque, largo alcance y alta velocidad.
+3. Bat de Beisbol - Alto poder de ataque, corto alcance y alta velocidad.
+
+### Atributos
++ Poder de ataque
++ Alcance
++ Velocidad
++ Efectividad (probabilidad de acertar golpes)
+
+### Adornos
++ Listones - Incrementan poder de ataque
++ Penacho - Incrementa velocidad
++ Estampas - Incrementan la efectividad
+
+### Amuletos
+[Proponer amuletos]
+
+## Personajes
 *Apariencia, comportamiento, habilidades, ataques, fortalezas, debilidades.*
 
 Hay varias personas con las que se puede hablar.
++ Sara - Está adornando un árbol de Navidad y pide ayuda para encontrar objetos perdidos.
++ Bruja del bosque - En realidad no es una bruja, pero podría ser peligrosa.
++ Vendedor de piñatas - Ayuda en el entrenamiento de Aldo.
 
 ## Bonus
 *Escenas, incentivos, juegos parecidos, competencia, cualquier cosa que no hayamos puesto en las secciones anteriores.*
+
+Está basado en los juegos de Pokémon.
 
 ### Investigación
 https://es.wikipedia.org/wiki/Rebozo
@@ -152,6 +204,7 @@ Fácil de usar, con muchos estilos
 http://goart.fotor.com
 Mejores resultados obtenidos hasta ahora
 Magic Cube | Sponge | Defoliation
+-----------|--------|-------------
 Dadaism | Cubism | Surrealism
 Ukiyoe | Sketch 2 | Artist’s sketch
 Abstractionism | Structuralism | Joy
