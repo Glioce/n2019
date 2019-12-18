@@ -4,16 +4,23 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snPuebloTranquilo</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
     <sprite>sprites\spAldo0</sprite>
   </sprites>
-  <backgrounds name="background"/>
-  <paths name="paths"/>
+  <backgrounds name="background">
+    <background>background\bgCelda</background>
+  </backgrounds>
+  <paths name="paths">
+    <path>paths\ptJugador</path>
+  </paths>
   <objects name="objects">
     <object>objects\obIntro</object>
     <object>objects\obJugador</object>
+    <object>objects\obMusica</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomIntro</room>

@@ -34,6 +34,8 @@ Este objeto es controlado por el jugador.
 Se mueve en 8 direcciones usando 4 botones o se desplaza al
 punto indicado con un clic en la ventana de juego.
 
+Utiliza el recurso ptJugador para guardar la ruta encontrada
+con el algoritmo de path-finding.
 **************************************************************/
 </string>
           </argument>
@@ -63,6 +65,33 @@ vy = 0; //velocidad vertical
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Iniciar sistema de búsqueda de ruta
+
+grid = mp_grid_create(0, 0, 1280/64, 720/64, 64, 64);
+//1280/64 = 20
+//720/64 = 11.25
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -83,16 +112,49 @@ vy = 0; //velocidad vertical
             <kind>1</kind>
             <string>/// Movimiento
 
+// Teclado
 der = keyboard_check(vk_right) or keyboard_check(ord('D'));
 izq = keyboard_check(vk_left) or keyboard_check(ord('A'));
 arr = keyboard_check(vk_up) or keyboard_check(ord('W'));
 aba = keyboard_check(vk_down) or keyboard_check(ord('S'));
 
-vx = (der - izq) * 3;
-vy = (aba - arr) * 3;
+vx = (der - izq) * 4;
+vy = (aba - arr) * 4;
 
 x += vx;
 y += vy;
+
+// Mouse
+if mouse_check_button_pressed(mb_left) {
+   mp_grid_path(grid, ptJugador, x, y, mouse_x, mouse_y, true);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Depuración
+
+//mp_grid_draw(grid);
+draw_self();
+draw_path(ptJugador, 0, 0, true);
 </string>
           </argument>
         </arguments>
