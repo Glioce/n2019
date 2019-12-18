@@ -128,7 +128,7 @@ En el centro del pueblo hay un parque y una iglesia.
 En el sur hay un bosque de árboles secos y pinos. En lo profundo del bosque hay una cabaña.
 Al norte hay una presa.
 
-## Interfaz
+## Gráficos y música
 *Descripción de los menús. Tipos de música y efectos de sonido. Colores, humor y acuerdos de diseño.*
 
 Los gráficos del juego son fotografías y dibujos feos que han sido procesados por una
@@ -144,10 +144,14 @@ adornado con luces de navidad) y un menú con 3 opciones:
 + Jugar
 + Créditos
 + Cerrar
+
 Al elegir "Jugar" aparece una pantalla de selección con 3 ranuras de juego.
 Elige una para continuar.
 En "Créditos" aparece una lista con información de los recursos utilizados en el juego.
 Al elegir "Cerrar" se cierra la aplicación.
+
+La música debe recordar a los juegos clásicos de los 90s. Se han descargado varias
+canciones compuestas en BeepBox.
 
 ## Mecánicas y objetos
 *Situaciones y modos de proceder para ganar en el juego. Descripción de los
@@ -180,6 +184,12 @@ golosinas (que es como la puntuación global).
 ### Amuletos
 [Proponer amuletos]
 
+### Movimientos
++ Golpe simple
++ Abanico
++ Torbellino
++ Búsqueda rápida
+
 ## Personajes
 *Apariencia, comportamiento, habilidades, ataques, fortalezas, debilidades.*
 
@@ -203,12 +213,13 @@ https://www.gob.mx/siap/es/articulos/la-pinata-simbolo-de-la-cultura-mexicana?id
 Fácil de usar, con muchos estilos
 http://goart.fotor.com
 Mejores resultados obtenidos hasta ahora
-Magic Cube | Sponge | Defoliation
------------|--------|-------------
-Dadaism | Cubism | Surrealism
-Ukiyoe | Sketch 2 | Artist’s sketch
+
+Magic Cube     | Sponge | Defoliation
+---------------|--------|-------------
+Dadaism        | Cubism | Surrealism
+Ukiyoe         | Sketch 2 | Artist’s sketch
 Abstractionism | Structuralism | Joy
-Pop Art | Color Fantasy | x
+Pop Art        | Color Fantasy | x
 
 ### Ideas anteriores para la historia
 El juego narra una historia triste que ocurre un poco antes de navidad.
