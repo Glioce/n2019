@@ -56,14 +56,60 @@ Si el jugador logra destruirla, se convierte en el mejor rompedor de piñatas de
 ## Controles
 *Descripción detallada de los controles y las acciones de los personajes.*
 
-Se puede usar solo ratón.  
-Mejor usar 4 botones para desplazamiento, 1 botón para interactuar, 1 botón configurable, 1 botón de pausa y 1 botón para saltar.
+### Exploración del pueblo
+4 botones para desplazamiento: WASD o flechas
+1 botón para interactuar: X o J
+1 botón configurable: ---
+1 botón de pausa: Esc o ---
+1 botón para saltar: ---
+
+El desplazamiento también se puede realizar haciendo clic en el escenario.
+Si se hace clic en una zona vacía, el prota se desplaza automáticamente hasta ese punto.
+
+### Romper piñatas
+Los botones de desplazamiento se usan cambiar el rectángulo en el que se realizará
+el ataque.
+El botón para interactuar selecciona el rectángulo.
+Después los botones de desplazamieto permiten cambiar el ataque o movimiento.
+El botón para interactuar selecciona el ataque o movimiento.
 
 ## Gameplay
 *¿Qué elementos enganchan al jugador? División de la secuencia de juego: niveles, rounds, mapas.
 Minijuegos. Diferencias en algunas plataformas. Modos de juego que tendrá.*
 
+El juego puede ser terminado en poco tiempo, tal vez 15 minutos.
 El jugador se puede sentir atraído por la temática alegre y el estilo gráfico poco común.
+
+El gameplay se divide en 2 partes: exploracion y romper piñatas.
+Mientras se explora se conocen las ubicaciones de las Posadas, se pueden encontrar 
+objetos perdidos y hablar con los habitantes del pueblo.
+Se podrían marcar los días que pasan.
+
+Romper piñatas requiere de una estrategia.
+Aparecen 6 rectánglos en los que se mueve la piñata.
+Se debe elegir un rectángulo para lanzar un golpe.
+En el entrenamiento, Aldo no tiene los ojos vendados y puede ver la posición
+de la piñata todo el tiempo.
+Cuando tiene los ojos vendados, la posición de la piñata solo es visible cuando
+se realiza un golpe exitoso.
+Si la velocidad de desplazamiento de la piñata es baja o la velocidad de ataque es alta,
+se puede hacia dónde se moverá (empieza a desplazarse mientras se hace invisible).
+Varias piñatas se mueven en patrones cortos para que sea más fácil predecir el movimiento.
+
+En la parte inferior de la ventana aparece la lista de golpes y movimientos.
+No habrá muchos. Aldo aprende movimientos en el transcurso del juego.
+Los golpes fuertes tienen baja probabilidad de acertar o corto alcance.
+Los golpes de largo alcance puede golpear la piñata aunque no se seleccione el rectánulo correcto
+y tienen altas probabilidades de acertar aunque la piñata esté a gran altura.
+Los golpes débiles tienen altas probabilidades de acertar y corto alcance.
+Cuando se realizan varios golpes exitosos seguidos se puede realizar un movimiento especial.
+[Proponer movimientos especiales].
+
+**Temporizador**
+En la parte superior de la ventana aparece una barra de tiempo. Al lanzar un golpe se reduce
+una longitud predeterminada (podría depender de la velocidad de ataque).
+Mientras se elije el siguiente movimiento, la barra de tiempo se reduce lentamente
+obligando al jugador a elegir rápido.
 
 ## Mundo
 *Lugares, ambientes, humores, evocaciones, y su relación con la historia.
