@@ -34,8 +34,14 @@ Este objeto es controlado por el jugador.
 Se mueve en 8 direcciones usando 4 botones o se desplaza al
 punto indicado con un clic en la ventana de juego.
 
-Utiliza el recurso ptJugador para guardar la ruta encontrada
-con el algoritmo de path-finding.
+Utiliza la ruta ptJugador para guardar el resultado de path-finding.
+
+Caminar con botones y haciendo clic con ratón
+[x] Primero centrar sprite
+
+[] Probar método sin alineación
+La posición final del personaje no siempre es alineada
+a la rejilla.
 **************************************************************/
 </string>
           </argument>
@@ -59,8 +65,21 @@ con el algoritmo de path-finding.
             <kind>1</kind>
             <string>/// Variables
 
+x += 32; //desplazar para alinear a la rejilla
+y += 32;
 vx = 0; //velocidad horizontal
 vy = 0; //velocidad vertical
+v = 4; //velocidad de desplazamiento
+direction = 270; //inicia mirando hacia abajo
+dirPrev = 270; //direction previa
+
+// Las siguientes variables se utilizan cuando el personaje
+// cambia la dirección a la que está mirando, es decir, se acaba de 
+// presionar un botón de movimiento diferente al último presionado.
+// En ese momento la dirección cambia y se pone el sprite adecuado.
+// El personaje no puede caminar hasta que el temporizador llegue a cero.
+tReposo = 0; //temporizador de reposo
+T_REPOSO = 3; //periodo de reposo en steps
 </string>
           </argument>
         </arguments>
@@ -84,9 +103,9 @@ vy = 0; //velocidad vertical
             <string>/// Iniciar sistema de búsqueda de ruta
 
 grid = mp_grid_create(0, 0, 1280/64, 720/64, 64, 64);
-//1280/64 = 20
-//720/64 = 11.25
-
+// 1280/64 = 20
+// 720/64 = 11.25
+// También se usa la ruta ptJugador
 
 </string>
           </argument>
@@ -118,16 +137,32 @@ izq = keyboard_check(vk_left) or keyboard_check(ord('A'));
 arr = keyboard_check(vk_up) or keyboard_check(ord('W'));
 aba = keyboard_check(vk_down) or keyboard_check(ord('S'));
 
-vx = (der - izq) * 4;
-vy = (aba - arr) * 4;
+// ejes de un joystick imaginario
+ejeX = der - izq;
+ejeY = aba - arr;
 
-x += vx;
-y += vy;
+if (ejeX &lt;&gt; 0 or ejeY &lt;&gt; 0) //si el joystick está desplazado
+{
+   direction = point_direction(0, 0, ejeX, ejeY);
+   if (direction &lt;&gt; dirPrev) {//si direction ha cambiado
+      tReposo = T_REPOSO; //iniciar temporizador
+      dirPrev = direction; //actualizar direction previa
+   }
+   
+   if (tReposo &lt;= 0) {
+      vx = lengthdir_x(v, direction);
+      vy = lengthdir_y(v, direction);
+      x += vx; //desplazar
+      y += vy;
+   }
+}
 
 // Mouse
 if mouse_check_button_pressed(mb_left) {
    mp_grid_path(grid, ptJugador, x, y, mouse_x, mouse_y, true);
 }
+
+if (tReposo &gt; 0) tReposo--;
 </string>
           </argument>
         </arguments>
@@ -155,6 +190,8 @@ if mouse_check_button_pressed(mb_left) {
 //mp_grid_draw(grid);
 draw_self();
 draw_path(ptJugador, 0, 0, true);
+
+draw_text(0, 0, direction);
 </string>
           </argument>
         </arguments>
