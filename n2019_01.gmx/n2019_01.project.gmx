@@ -10,6 +10,7 @@
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
     <sprite>sprites\spAldo0</sprite>
+    <sprite>sprites\spBloque</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgCelda</background>
@@ -21,6 +22,7 @@
     <object>objects\obIntro</object>
     <object>objects\obJugador</object>
     <object>objects\obMusica</object>
+    <object>objects\obBloque</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomIntro</room>

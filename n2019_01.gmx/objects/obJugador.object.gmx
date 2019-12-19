@@ -79,7 +79,8 @@ dirPrev = 270; //direction previa
 // En ese momento la dirección cambia y se pone el sprite adecuado.
 // El personaje no puede caminar hasta que el temporizador llegue a cero.
 tReposo = 0; //temporizador de reposo
-T_REPOSO = 3; //periodo de reposo en steps
+T_REPOSO = 1; //periodo de reposo en steps
+
 </string>
           </argument>
         </arguments>
@@ -105,8 +106,14 @@ T_REPOSO = 3; //periodo de reposo en steps
 grid = mp_grid_create(0, 0, 1280/64, 720/64, 64, 64);
 // 1280/64 = 20
 // 720/64 = 11.25
-// También se usa la ruta ptJugador
 
+// también se usa la ruta ptJugador
+
+// para saber si el objeto sigue a una ruta
+// se usa la variable path_index (&gt; -1)
+
+//agregar objetos a la rejilla
+mp_grid_add_instances(grid, obBloque, false);
 </string>
           </argument>
         </arguments>
@@ -143,6 +150,7 @@ ejeY = aba - arr;
 
 if (ejeX &lt;&gt; 0 or ejeY &lt;&gt; 0) //si el joystick está desplazado
 {
+   path_end();
    direction = point_direction(0, 0, ejeX, ejeY);
    if (direction &lt;&gt; dirPrev) {//si direction ha cambiado
       tReposo = T_REPOSO; //iniciar temporizador
@@ -158,11 +166,65 @@ if (ejeX &lt;&gt; 0 or ejeY &lt;&gt; 0) //si el joystick está desplazado
 }
 
 // Mouse
-if mouse_check_button_pressed(mb_left) {
-   mp_grid_path(grid, ptJugador, x, y, mouse_x, mouse_y, true);
+if mouse_check_button_pressed(mb_left) {//si se hace clic
+   metaX = (mouse_x div 64)*64 + 32; //obtener posicion final
+   metaY = (mouse_y div 64)*64 + 32;
+   
+   //si se encuentra una ruta, seguirla
+   if mp_grid_path(grid, ptJugador, x, y, metaX, metaY, true) {
+      path_start(ptJugador, v, path_action_stop, true);
+   }
 }
 
 if (tReposo &gt; 0) tReposo--;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Colisiones
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Borrar estructuras dinámicas
+
+mp_grid_destroy(grid);
 </string>
           </argument>
         </arguments>
@@ -192,6 +254,7 @@ draw_self();
 draw_path(ptJugador, 0, 0, true);
 
 draw_text(0, 0, direction);
+draw_text(0, 24, path_index);
 </string>
           </argument>
         </arguments>
