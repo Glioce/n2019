@@ -217,7 +217,6 @@ Mejores resultados obtenidos hasta ahora
 Magic Cube     | Sponge | Defoliation
 ---------------|--------|-------------
 Dadaism        | Cubism | Surrealism
----------------|--------|-------------
 Ukiyoe         | Sketch 2 | Artist’s sketch
 Abstractionism | Structuralism | Joy
 Pop Art        | Color Fantasy | x
