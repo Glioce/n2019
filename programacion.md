@@ -31,5 +31,24 @@ o en otras zonas que se traslapan con el escenario exterior.
 Mejor indicar las coordenadas siguientes, la dirección y la room al tocar
 el objeto de salida, aunque esto parezca un poco más difícil.
 
+## Pathfinding
 Nota: posible bug, si se hace clic justo en la orilla de la ventana, se podría generar
 una ruta por fuera de la room, ¿cómo comprobarlo?
+
+## Guardado
+Es un juego muy corto y tal vez no requiere guardado.
+Lo que se puede guardar es:
+
++ room
++ coordenadas dentro de la room
++ contador de dulces
++ bits (flags) de instrumentos obtenidos
++ bits (flags) de accesorios obtenidos
++ bits (flags) de movimientos apredidos
++ bits (flags) de amuletos obtenidos
++ bits (flags) de eventos vistos
+
+## Registro de conversaciones
+Lo más seguro es que esto no se implemente. 
+En algún se menú se podría acceder a un registro de las 
+últimas conversaciones, por si es necesario leer otra vez.

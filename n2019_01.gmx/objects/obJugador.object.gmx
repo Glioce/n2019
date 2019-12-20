@@ -71,7 +71,7 @@ x = global.xSig; //posicionarse en el punto indicado
 y = global.ySig; //al salir de la room anterior
 vx = 0; //velocidad horizontal
 vy = 0; //velocidad vertical
-v = 4; //velocidad de desplazamiento
+v = 8; //velocidad de desplazamiento
 direction = global.dirSig; //inicia mirando hacia abajo
 dirPrev = direction; //direction previa
 
@@ -144,7 +144,11 @@ vy = 0;
 
 if (ejeX &lt;&gt; 0 or ejeY &lt;&gt; 0) //si el joystick está desplazado
 {
-   path_end();
+   if (path_index &gt; -1) {
+      path_end();
+      instance_destroy(obMarca);
+   }
+
    direction = point_direction(0, 0, ejeX, ejeY);
    if (direction &lt;&gt; dirPrev) {//si direction ha cambiado
       tReposo = T_REPOSO; //iniciar temporizador
@@ -165,6 +169,8 @@ if mouse_check_button_pressed(mb_left) {//si se hace clic
    //si se encuentra una ruta, seguirla
    if mp_grid_path(grid, ptJugador, x, y, metaX, metaY, true) {
       path_start(ptJugador, v, path_action_stop, true);
+      if instance_exists(obMarca) instance_destroy(obMarca);
+      instance_create(metaX, metaY, obMarca);
    }
 }
 
@@ -237,6 +243,31 @@ if (bloque &lt;&gt; noone) {
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Destruir marca
+
+if instance_exists(obMarca) instance_destroy(obMarca);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="5">
       <action>
         <libid>1</libid>
@@ -262,6 +293,33 @@ mp_grid_destroy(grid);
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Depurar
+
+draw_text(0, 0, direction);
+draw_text(0, 24, path_index);
+draw_text(0, 48, fps);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -279,14 +337,11 @@ mp_grid_destroy(grid);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Depuración
+            <string>/// Depurar
 
 //mp_grid_draw(grid);
 draw_self();
 draw_path(ptJugador, 0, 0, true);
-
-draw_text(0, 0, direction);
-draw_text(0, 24, path_index);
 </string>
           </argument>
         </arguments>

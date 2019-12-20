@@ -53,10 +53,13 @@ y carga configuraciones
             <kind>1</kind>
             <string>/// Inicializar globales
 
+draw_set_colour(c_white);
+
 // jugador
 global.dirSig = 270;
 global.xSig = 800;
 global.ySig = 800;
+global.roomSig = rmMotor11;
 </string>
           </argument>
         </arguments>
@@ -81,14 +84,14 @@ global.ySig = 800;
             <kind>1</kind>
             <string>/// Clic para continuar
 
-draw_set_colour(c_white);
 draw_text(x, y, "Intro");
 draw_text(x, y+100, "Presiona cualquier tecla para continuar");
 
 if keyboard_check_pressed(vk_anykey) 
-or mouse_check_button_pressed(mb_any)
-   room_goto_next();
-
+or mouse_check_button_pressed(mb_any) {
+   //room_goto_next();
+   room_goto(global.roomSig);
+}
 </string>
           </argument>
         </arguments>
