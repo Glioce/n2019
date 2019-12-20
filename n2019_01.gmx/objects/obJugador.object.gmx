@@ -65,13 +65,15 @@ a la rejilla.
             <kind>1</kind>
             <string>/// Variables
 
-x += 32; //desplazar para alinear a la rejilla
-y += 32;
+//x += 32; //desplazar para alinear a la rejilla
+//y += 32;
+x = global.xSig; //posicionarse en el punto indicado
+y = global.ySig; //al salir de la room anterior
 vx = 0; //velocidad horizontal
 vy = 0; //velocidad vertical
 v = 4; //velocidad de desplazamiento
-direction = 270; //inicia mirando hacia abajo
-dirPrev = 270; //direction previa
+direction = global.dirSig; //inicia mirando hacia abajo
+dirPrev = direction; //direction previa
 
 // Las siguientes variables se utilizan cuando el personaje
 // cambia la dirección a la que está mirando, es decir, se acaba de 
@@ -83,7 +85,7 @@ T_REPOSO = 1; //periodo de reposo en steps
 
 /// Iniciar sistema de búsqueda de ruta
 
-grid = mp_grid_create(0, 0, room_width/64, room_height/64, 64, 64);
+grid = mp_grid_create(-64, -64, (room_width/64)+2, (room_height/64)+2, 64, 64);
 // 1280/64 = 20
 // 720/64 = 11.25
 
@@ -206,9 +208,9 @@ if (bloque &lt;&gt; noone) {
 }
 
 //no salir por la izquierda de la room
-if (x &lt; boxL) {x = boxL;  vx = 0;}
+//if (x &lt; boxL) {x = boxL;  vx = 0;}
 //no salir por la derecha de la room
-if (x+boxR &gt; room_width) {x = room_width-boxR;  vx = 0;}
+//if (x+boxR &gt; room_width) {x = room_width-boxR;  vx = 0;}
 
 // Vertical
 yPrev = y; //guardar posicion previa
@@ -225,6 +227,11 @@ if (bloque &lt;&gt; noone) {
    }   
    vy = 0;
 }
+
+//no salir por arriba de la room
+//if (y &lt; boxU) {y = boxU;  vy = 0;}
+//no salir por abajo de la room
+//if (y+boxD &gt; room_height) {y = room_height-boxD;  vy = 0;}
 </string>
           </argument>
         </arguments>

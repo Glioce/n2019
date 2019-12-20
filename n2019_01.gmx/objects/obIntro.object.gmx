@@ -51,8 +51,12 @@ y carga configuraciones
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// nada
+            <string>/// Inicializar globales
 
+// jugador
+global.dirSig = 270;
+global.xSig = 800;
+global.ySig = 800;
 </string>
           </argument>
         </arguments>
