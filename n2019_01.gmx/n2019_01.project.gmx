@@ -23,6 +23,7 @@
     <object>objects\obJugador</object>
     <object>objects\obMusica</object>
     <object>objects\obBloque</object>
+    <object>objects\obCam</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomIntro</room>

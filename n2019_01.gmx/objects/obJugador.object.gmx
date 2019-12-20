@@ -83,7 +83,7 @@ T_REPOSO = 1; //periodo de reposo en steps
 
 /// Iniciar sistema de búsqueda de ruta
 
-grid = mp_grid_create(0, 0, 1280/64, 720/64, 64, 64);
+grid = mp_grid_create(0, 0, room_width/64, room_height/64, 64, 64);
 // 1280/64 = 20
 // 720/64 = 11.25
 
