@@ -1,7 +1,7 @@
-## Ideas de programación
+# Ideas de programación
 En este documentos se explican varios sistemas del juego.
 
-# Conexión de rooms
+## Conexión de rooms
 Cada room puede tener una posición global. La posición de cada room se guarda en el objeto
 jugador usando Creation Code.
 
@@ -21,8 +21,8 @@ del jugador en los cambios de room.
 Las coordenadas globales de las rooms se podría obtener de una estructura de datos
 o indicarse en el objeto de salida.
 
-La estructura de datos podría ser una tabla (array 2D) de esta forma:
-room_index | xizq | xder | yarr | yaba
+La estructura de datos podría ser una tabla (array 2D) de esta forma:  
+room_index | xizq | xder | yarr | yaba  
 Los 4 valores de las derecha son coordenadas globales.
 
 Este modo de organizar no se aplia cuando el jugador entra en una casa
