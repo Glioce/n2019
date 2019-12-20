@@ -81,27 +81,7 @@ dirPrev = 270; //direction previa
 tReposo = 0; //temporizador de reposo
 T_REPOSO = 1; //periodo de reposo en steps
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Iniciar sistema de búsqueda de ruta
+/// Iniciar sistema de búsqueda de ruta
 
 grid = mp_grid_create(0, 0, 1280/64, 720/64, 64, 64);
 // 1280/64 = 20
@@ -114,6 +94,16 @@ grid = mp_grid_create(0, 0, 1280/64, 720/64, 64, 64);
 
 //agregar objetos a la rejilla
 mp_grid_add_instances(grid, obBloque, false);
+
+// Caja de colisión personalizada
+boxL = 32;
+boxR = 32;
+boxU = 32;
+boxD = 32;
+
+// pos previa
+xPrev = x;
+yPrev = y;
 </string>
           </argument>
         </arguments>
@@ -147,6 +137,8 @@ aba = keyboard_check(vk_down) or keyboard_check(ord('S'));
 // ejes de un joystick imaginario
 ejeX = der - izq;
 ejeY = aba - arr;
+vx = 0;
+vy = 0;
 
 if (ejeX &lt;&gt; 0 or ejeY &lt;&gt; 0) //si el joystick está desplazado
 {
@@ -160,8 +152,6 @@ if (ejeX &lt;&gt; 0 or ejeY &lt;&gt; 0) //si el joystick está desplazado
    if (tReposo &lt;= 0) {
       vx = lengthdir_x(v, direction);
       vy = lengthdir_y(v, direction);
-      x += vx; //desplazar
-      y += vy;
    }
 }
 
@@ -199,7 +189,42 @@ if (tReposo &gt; 0) tReposo--;
             <kind>1</kind>
             <string>/// Colisiones
 
+// Horizontal
+xPrev = x; //guardar pos. previa
+x += vx; //desplazar horizontalmente
 
+// revisar colisiones con bloques solidos
+bloque = instance_place(x, y, obBloque);
+if (bloque &lt;&gt; noone) {
+   if (bloque.x &lt; x) { //bloque a la izquierda
+      x = bloque.x + bloque.sprite_width + boxL;
+   }
+   else {//bloque a la derecha
+      x = bloque.x - boxR;
+   }
+   vx = 0;
+}
+
+//no salir por la izquierda de la room
+if (x &lt; boxL) {x = boxL;  vx = 0;}
+//no salir por la derecha de la room
+if (x+boxR &gt; room_width) {x = room_width-boxR;  vx = 0;}
+
+// Vertical
+yPrev = y; //guardar posicion previa
+y += vy; //desplazar verticalmente
+
+// Revisar colisiones con bloques solidos
+bloque = instance_place(x, y, obBloque);
+if (bloque &lt;&gt; noone) {
+   if (bloque.y &lt; y) {//bloque arriba
+      y = bloque.y + bloque.sprite_height + boxU;
+   }
+   else {//bloque abajo
+      y = bloque.y - boxD;
+   }   
+   vy = 0;
+}
 </string>
           </argument>
         </arguments>
