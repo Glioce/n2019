@@ -52,6 +52,7 @@ Este objeto reproduce la música de varios escenarios
             <kind>1</kind>
             <string>/// Música de prueba
 
+if not audio_is_playing(snPuebloTranquilo)
 audio_play_sound(snPuebloTranquilo, 1, true);
 </string>
           </argument>

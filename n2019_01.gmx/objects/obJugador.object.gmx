@@ -163,7 +163,8 @@ if (ejeX &lt;&gt; 0 or ejeY &lt;&gt; 0) //si el joystick está desplazado
 
 // Mouse
 if mouse_check_button_pressed(mb_left) {//si se hace clic
-   metaX = (mouse_x div 64)*64 + 32; //obtener posicion final
+   //obtener posicion final
+   metaX = (mouse_x div 64)*64 + 32;
    metaY = (mouse_y div 64)*64 + 32;
    
    //si se encuentra una ruta, seguirla
@@ -171,6 +172,14 @@ if mouse_check_button_pressed(mb_left) {//si se hace clic
       path_start(ptJugador, v, path_action_stop, true);
       if instance_exists(obMarca) instance_destroy(obMarca);
       instance_create(metaX, metaY, obMarca);
+      
+      //si se hace clic sobre un objeto salida,
+      //cambiar sprite de obMarca
+      salida = instance_position(mouse_x, mouse_y, obSalida)
+      if (salida &lt;&gt; noone) {
+         obMarca.sprite_index = spMarcaSalida;
+         obMarca.image_angle = salida.image_angle;
+      }
    }
 }
 
@@ -242,6 +251,72 @@ if (bloque &lt;&gt; noone) {
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Salir de room
+
+// izquierda
+if (x &lt; 0) {
+   //obtener id de instancia de objeto salida
+   //tal vez ya se tiene el id si se hizo clic en la salida,
+   //pero es necesario obtenerlo si el jugador avanza usando el teclado
+   salida = instance_place(x, y, obSalida);
+   global.roomSig = salida.roomSig;
+   global.xSig = x + salida.deltaX;
+   global.ySig = y + salida.deltaY;
+   global.dirSig = 180;
+   
+   room_goto(global.roomSig);
+}
+// derecha
+if (x &gt; room_width) {
+   salida = instance_place(x, y, obSalida);
+   show_debug_message(salida);
+   global.roomSig = salida.roomSig;
+   global.xSig = x + salida.deltaX;
+   global.ySig = y + salida.deltaY;
+   global.dirSig = 0;
+   
+   room_goto(global.roomSig);
+}
+// arriba
+if (y &lt; 0) {
+   salida = instance_place(x, y, obSalida);
+   global.roomSig = salida.roomSig;
+   global.xSig = x + salida.deltaX;
+   global.ySig = y + salida.deltaY;
+   global.dirSig = 90;
+   
+   room_goto(global.roomSig);
+}
+// abajo
+if (y &gt; room_height) {
+   salida = instance_place(x, y, obSalida);
+   global.roomSig = salida.roomSig;
+   global.xSig = x + salida.deltaX;
+   global.ySig = y + salida.deltaY;
+   global.dirSig = 270;
+   
+   room_goto(global.roomSig);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="7" enumb="8">
       <action>
@@ -260,9 +335,18 @@ if (bloque &lt;&gt; noone) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Destruir marca
+            <string>/// Salir o destruir marca
 
-if instance_exists(obMarca) instance_destroy(obMarca);
+//si se hizo clic en un objeto salida
+if (salida &lt;&gt; noone) {
+   mp_grid_path(grid, ptJugador, x, y,
+   x + lengthdir_x(64, salida.image_angle), 
+   y + lengthdir_y(64, salida.image_angle), true);
+   path_start(ptJugador, v, path_action_stop, true);
+}
+else if instance_exists(obMarca) {
+   instance_destroy(obMarca);
+}
 </string>
           </argument>
         </arguments>
