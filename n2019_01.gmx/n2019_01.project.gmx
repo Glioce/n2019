@@ -44,6 +44,12 @@
     <room>rooms\rmMotorCasa</room>
     <room>rooms\rm0</room>
   </rooms>
+  <constants number="4">
+    <constant name="ESTADO_NORMAL">0</constant>
+    <constant name="ESTADO_MUERTO">1</constant>
+    <constant name="ESTADO_DIALOGO">2</constant>
+    <constant name="ESTADO_PAUSA">3</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
