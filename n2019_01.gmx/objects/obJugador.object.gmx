@@ -269,8 +269,12 @@ if (bloque &lt;&gt; noone) {
             <kind>1</kind>
             <string>/// Salir de room
 
-// izquierda
-if (x &lt; 0) {
+// detectar colision con puerta
+puerta = instance_position(x, y, obPuerta);
+//puerta = instance_place(x, y, obPuerta);
+
+// izquierda       derecha        arriba     abajo
+if (x &lt; 0) or (x &gt; room_width) or (y &lt; 0) or (y &gt; room_height) or (puerta &lt;&gt; noone) {
    //obtener id de instancia de objeto salida
    //tal vez ya se tiene el id si se hizo clic en la salida,
    //pero es necesario obtenerlo si el jugador avanza usando el teclado
@@ -278,41 +282,11 @@ if (x &lt; 0) {
    global.roomSig = salida.roomSig;
    global.xSig = x + salida.deltaX;
    global.ySig = y + salida.deltaY;
-   global.dirSig = 180;
+   global.dirSig = salida.image_angle;
    
    room_goto(global.roomSig);
 }
-// derecha
-if (x &gt; room_width) {
-   salida = instance_place(x, y, obSalida);
-   show_debug_message(salida);
-   global.roomSig = salida.roomSig;
-   global.xSig = x + salida.deltaX;
-   global.ySig = y + salida.deltaY;
-   global.dirSig = 0;
-   
-   room_goto(global.roomSig);
-}
-// arriba
-if (y &lt; 0) {
-   salida = instance_place(x, y, obSalida);
-   global.roomSig = salida.roomSig;
-   global.xSig = x + salida.deltaX;
-   global.ySig = y + salida.deltaY;
-   global.dirSig = 90;
-   
-   room_goto(global.roomSig);
-}
-// abajo
-if (y &gt; room_height) {
-   salida = instance_place(x, y, obSalida);
-   global.roomSig = salida.roomSig;
-   global.xSig = x + salida.deltaX;
-   global.ySig = y + salida.deltaY;
-   global.dirSig = 270;
-   
-   room_goto(global.roomSig);
-}
+
 </string>
           </argument>
         </arguments>

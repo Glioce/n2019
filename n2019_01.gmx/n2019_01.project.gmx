@@ -29,6 +29,7 @@
     <object>objects\obCam</object>
     <object>objects\obMarca</object>
     <object>objects\obSalida</object>
+    <object>objects\obPuerta</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomIntro</room>
@@ -36,6 +37,7 @@
     <room>rooms\rmMotor01</room>
     <room>rooms\rmMotor10</room>
     <room>rooms\rmMotor11</room>
+    <room>rooms\rmMotorCasa</room>
     <room>rooms\rm0</room>
   </rooms>
   <help>

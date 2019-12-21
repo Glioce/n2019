@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obSalida</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,21 +27,19 @@
             <kind>1</kind>
             <string>/// Info
 /****************************************************************************
-Este objeto se coloca en los bordes de las rooms, en donde
-no hay bloques solidos y el objeto jugador puede salir.
+Este objeto se coloca en las puertas de las casas.
+
+Es hijo del objeto salida, pero a diferencia de este, no se coloca
+en los bordes de las rooms, sino en el interior.
 
 A este objeto se le asignan 4 valores en "Creation Code",
-en el editor de rooms:
+en el editor de rooms (igual que al objeto salida):
 
 roomSig &lt;-- room siguiente
 deltaX &lt;-- posición relativa de la room siguiente respecto a la room actual
 deltaY &lt;-- posición relativa de la room siguiente respecto a la room actual
 dirSig &lt;-- direccion que tendrá el jugador al pasar a la sig room,
            (no es necesario definirla, siempre es igual a image_angle)
-
-Este objeto es padre del objeto puerta. Al objeto puerta también
-se le asignan 4 valores, pero la forma en que se detectan las 
-colisiones es diferente.
 *****************************************************************************/
 </string>
           </argument>

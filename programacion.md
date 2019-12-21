@@ -1,6 +1,14 @@
 # Ideas de programación
 En este documentos se explican varios sistemas del juego.
 
+## Tamaño de rooms
+El tamaño mínimo de cada room es 1280 x 720 px  
+El tamaño de las celdas en que se divide el escenario es 64 x 64 px  
+1280 / 64 = 20  
+720 / 64 = 11.25  
+Se buscará crear pocas rooms pequeñas, pero con varios detalles ocultos
+para que no sean demasiado simples
+
 ## Conexión de rooms
 Cada room puede tener una posición global. La posición de cada room se guarda en el objeto
 jugador usando Creation Code.
@@ -34,6 +42,9 @@ Mejor indicar las coordenadas siguientes, la dirección y la room al tocar
 el objeto de salida, aunque esto parezca un poco más difícil.
 Las puertas funcionan muy parecido, pero en lugar de salir de la room, se debe
 tocar un objeto puerta.
+
+deltaX = room.x - roomSig.x
+deltaY = room.y - roomSig.y
 
 ## Pathfinding
 Nota: posible bug, si se hace clic justo en la orilla de la ventana, se podría generar

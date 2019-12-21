@@ -51,19 +51,23 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obMusica" x="128" y="64" name="inst_B1C1506B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obBloque" x="512" y="256" name="inst_E3918FC1" locked="0" code="" scaleX="5" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obMusica" x="192" y="192" name="inst_B1C1506B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obBloque" x="640" y="384" name="inst_E3918FC1" locked="0" code="" scaleX="4" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obBloque" x="1216" y="576" name="inst_B6EA889E" locked="0" code="" scaleX="4" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obBloque" x="0" y="704" name="inst_927374A0" locked="0" code="" scaleX="4" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obBloque" x="1088" y="320" name="inst_FBA68619" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obBloque" x="192" y="256" name="inst_58FFB3DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obBloque" x="576" y="704" name="inst_8A0748E0" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obCam" x="64" y="64" name="inst_54947832" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obBloque" x="256" y="448" name="inst_8A0748E0" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obCam" x="128" y="192" name="inst_54947832" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obJugador" x="832" y="768" name="inst_A8FC6AE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obBloque" x="0" y="0" name="inst_AB4E0990" locked="0" code="" scaleX="24" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obBloque" x="1536" y="0" name="inst_12505BF1" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>
-    <instance objName="obSalida" x="64" y="704" name="inst_7A17D921" locked="0" code="roomSig = rmMotor00;&#xA;deltaX = room_width;&#xA;deltaY = 0;&#xA;dirSig = image_angle;&#xA;" scaleX="1" scaleY="10" colour="4294967295" rotation="180"/>
+    <instance objName="obBloque" x="0" y="0" name="inst_AB4E0990" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obBloque" x="1536" y="128" name="inst_12505BF1" locked="0" code="" scaleX="1" scaleY="13" colour="4294967295" rotation="0"/>
+    <instance objName="obSalida" x="64" y="704" name="inst_7A17D921" locked="0" code="roomSig = rmMotor00;&#xA;deltaX = room_width;&#xA;deltaY = 0;&#xA;dirSig = image_angle;&#xA;" scaleX="1" scaleY="9" colour="4294967295" rotation="180"/>
     <instance objName="obSalida" x="1536" y="896" name="inst_7EE07AB5" locked="0" code="roomSig = rmMotor11;&#xA;deltaX = 0;&#xA;deltaY = -room_height;&#xA;dirSig = image_angle;&#xA;" scaleX="1" scaleY="20" colour="4294967295" rotation="270"/>
+    <instance objName="obBloque" x="384" y="0" name="inst_4B8BF348" locked="0" code="" scaleX="4" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obBloque" x="896" y="0" name="inst_4037DD0E" locked="0" code="" scaleX="5" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obBloque" x="1216" y="0" name="inst_0B136095" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obPuerta" x="640" y="192" name="inst_3CBD4ECE" locked="0" code="roomSig = rmMotorCasa;&#xA;deltaX = -2 * 64;&#xA;deltaY = 12 * 64;&#xA;dirSig = image_angle;&#xA;" scaleX="1" scaleY="4" colour="4294967295" rotation="90"/>
+    <instance objName="obBloque" x="640" y="0" name="inst_0E5188B9" locked="0" code="" scaleX="4" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

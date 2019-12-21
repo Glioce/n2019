@@ -56,10 +56,11 @@ y carga configuraciones
 draw_set_colour(c_white);
 
 // jugador
+global.roomSig = rmMotor00;
 global.dirSig = 270;
 global.xSig = 800;
 global.ySig = 800;
-global.roomSig = rmMotor00;
+
 </string>
           </argument>
         </arguments>
