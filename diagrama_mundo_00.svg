@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="261.56539"
-     inkscape:cy="591.19588"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="351.3485"
+     inkscape:cy="541.97978"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -172,13 +172,24 @@
          y="171.4552"
          x="75.40625"
          sodipodi:role="line">Forma cuadrada</tspan></text>
-    <rect
-       style="fill:#00ffff;fill-opacity:0.43386248;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4628"
-       width="40.216656"
-       height="31.75"
-       x="69.850006"
-       y="127.66666" />
+    <g
+       id="g4778"
+       transform="translate(-2.1166652,-1.2494141e-6)">
+      <rect
+         y="123.43333"
+         x="69.849998"
+         height="31.75"
+         width="42.333328"
+         id="rect4628"
+         style="fill:#00ffff;fill-opacity:0.43386248;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="153.06667"
+         x="86.783325"
+         height="2.1166604"
+         width="8.4666719"
+         id="rect4774"
+         style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
     <text
        id="text4576"
        y="142.61562"
