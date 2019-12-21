@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="351.3485"
-     inkscape:cy="541.97978"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="377.72753"
+     inkscape:cy="684.11505"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -376,5 +376,68 @@
          y="204.22232"
          style="font-weight:bold;stroke-width:0.26458332"
          id="tspan4764">Casa de Sara</tspan></text>
+    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4780"
+       width="4.2333398"
+       height="10.583336"
+       x="61.383327"
+       y="170" />
+    <rect
+       y="169.99998"
+       x="114.3"
+       height="10.583336"
+       width="4.2333398"
+       id="rect4782"
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4784"
+       width="8.4666662"
+       height="4.2333369"
+       x="143.93333"
+       y="157.29999" />
+    <rect
+       y="125.55"
+       x="61.383339"
+       height="4.2333279"
+       width="2.116663"
+       id="rect4786"
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="199.63333"
+       x="86.78334"
+       height="4.2333369"
+       width="8.4666662"
+       id="rect4788"
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="186.93335"
+       x="156.63333"
+       height="2.1166608"
+       width="6.350009"
+       id="rect4790"
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="186.93335"
+       x="44.450001"
+       height="2.1166606"
+       width="6.3500066"
+       id="rect4792"
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4794"
+       width="6.3500042"
+       height="2.1166694"
+       x="23.283329"
+       y="161.53333" />
+    <rect
+       y="110.73333"
+       x="114.3"
+       height="8.4666691"
+       width="4.2333317"
+       id="rect4796"
+       style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>
