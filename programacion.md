@@ -13,7 +13,7 @@ se inicia una segunda ruta que mueve al personaje fuera de la room.
 2. Se crea una ruta con el punto final fuera de la room, pero la celca de salida
 se marca una celda atrás.
 
-Se elegirá el método 2.
+Se elegirá el método 1.
 
 Se deben crear variables globales que guarden la posición y dirección 
 del jugador en los cambios de room.
@@ -25,11 +25,15 @@ La estructura de datos podría ser una tabla (array 2D) de esta forma:
 room_index | xizq | xder | yarr | yaba  
 Los 4 valores de las derecha son coordenadas globales.
 
-Este modo de organizar no se aplia cuando el jugador entra en una casa
+Este modo de organizar no se aplica cuando el jugador entra en una casa
 o en otras zonas que se traslapan con el escenario exterior.
+En lugar de guardar las coordenadas de la room en el mundo, se guardará
+la posición relativa en el mundo.
 
 Mejor indicar las coordenadas siguientes, la dirección y la room al tocar
 el objeto de salida, aunque esto parezca un poco más difícil.
+Las puertas funcionan muy parecido, pero en lugar de salir de la room, se debe
+tocar un objeto puerta.
 
 ## Pathfinding
 Nota: posible bug, si se hace clic justo en la orilla de la ventana, se podría generar
