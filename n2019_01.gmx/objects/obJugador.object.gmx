@@ -106,6 +106,9 @@ boxD = 32;
 // pos previa
 xPrev = x;
 yPrev = y;
+
+// interacción con personajes
+npc = noone;
 </string>
           </argument>
         </arguments>
@@ -291,6 +294,48 @@ if (x &lt; 0) or (x &gt; room_width) or (y &lt; 0) or (y &gt; room_height) or (p
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Interacción con personajes
+
+npc = instance_position(x+33, y, obNPC);
+if (npc == noone) npc = instance_position(x-33, y, obNPC);
+if (npc == noone) npc = instance_position(x, y+33, obNPC);
+if (npc == noone) npc = instance_position(x, y-33, obNPC);
+
+if (npc &lt;&gt; noone) {
+   if (keyboard_check_pressed(ord('J')) or keyboard_check_pressed(ord('X')))
+   or (mouse_check_button_pressed(mb_left) and npc == instance_position(mouse_x, mouse_y, obNPC)) {
+      // inicia diálogo
+      show_debug_message("DIALOGO");
+   }  
+}
+
+/*npc = noone;
+with (obNPC) {
+   if (abs(x - other.x) &lt;= 4) or (abs(y - other.y) &lt;= 4) {
+      other.npc = id;
+      break;
+   }
+}*/
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="7" enumb="8">
       <action>
@@ -400,6 +445,9 @@ draw_text(0, 48, fps);
 //mp_grid_draw(grid);
 draw_self();
 draw_path(ptJugador, 0, 0, true);
+
+if (npc &lt;&gt; noone)//draw_text(npc.x, npc.y, "HABLAR");
+draw_sprite(spHablar, (current_time mod 600) &gt; 300, npc.x, npc.y);
 </string>
           </argument>
         </arguments>

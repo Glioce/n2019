@@ -66,7 +66,7 @@
     <instance objName="obBloque" x="384" y="0" name="inst_4B8BF348" locked="0" code="" scaleX="4" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obBloque" x="896" y="0" name="inst_4037DD0E" locked="0" code="" scaleX="5" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obBloque" x="1216" y="0" name="inst_0B136095" locked="0" code="" scaleX="6" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obPuerta" x="640" y="192" name="inst_3CBD4ECE" locked="0" code="roomSig = rmMotorCasa;&#xA;deltaX = -2 * 64;&#xA;deltaY = 12 * 64;&#xA;dirSig = image_angle;&#xA;" scaleX="1" scaleY="4" colour="4294967295" rotation="90"/>
+    <instance objName="obPuerta" x="640" y="192" name="inst_3CBD4ECE" locked="0" code="roomSig = rmMotorCasa;&#xA;deltaX = -2 * 64;&#xA;deltaY = 12 * 64;&#xA;dirSig = image_angle;" scaleX="1" scaleY="4" colour="4294967295" rotation="90"/>
     <instance objName="obBloque" x="640" y="0" name="inst_0E5188B9" locked="0" code="" scaleX="4" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

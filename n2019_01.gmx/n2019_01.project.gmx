@@ -12,8 +12,10 @@
     <sprite>sprites\spAldo0</sprite>
     <sprite>sprites\spBloque</sprite>
     <sprite>sprites\spMarca</sprite>
+    <sprite>sprites\spHablar</sprite>
     <sprite>sprites\spMarcaSalida</sprite>
     <sprite>sprites\spSalida</sprite>
+    <sprite>sprites\spSara</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgCelda</background>
@@ -30,6 +32,8 @@
     <object>objects\obMarca</object>
     <object>objects\obSalida</object>
     <object>objects\obPuerta</object>
+    <object>objects\obNPC</object>
+    <object>objects\obSara</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomIntro</room>
