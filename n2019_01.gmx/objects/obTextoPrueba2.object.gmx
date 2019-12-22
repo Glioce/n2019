@@ -149,9 +149,7 @@ A[|k-1] = 0; //alfa
             <string>/// Dibujar texto desde array
 
 for (i=0; i&lt;k; i++) {
-   //draw_text(x + X[i], y + Y[i], P[i]);
    draw_set_alpha(A[|i]);
-   //draw_set_alpha(1);
    draw_text_transformed(x + X[|i], y + Y[|i], L[|i], 1, S[|i], 0);
 }
 
