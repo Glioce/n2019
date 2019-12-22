@@ -23,6 +23,12 @@
   <paths name="paths">
     <path>paths\ptJugador</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\string_parse.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnCourier</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obIntro</object>
     <object>objects\obJugador</object>
@@ -34,6 +40,8 @@
     <object>objects\obPuerta</object>
     <object>objects\obNPC</object>
     <object>objects\obSara</object>
+    <object>objects\obTextoPrueba1</object>
+    <object>objects\obTextoPrueba2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomIntro</room>

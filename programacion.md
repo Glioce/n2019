@@ -63,6 +63,9 @@ Lo que se puede guardar es:
 + bits (flags) de amuletos obtenidos
 + bits (flags) de eventos vistos
 
+## Sistema de Diálogos/Conversaciones
+
+
 ## Registro de conversaciones
 Lo más seguro es que esto no se implemente. 
 En algún se menú se podría acceder a un registro de las 

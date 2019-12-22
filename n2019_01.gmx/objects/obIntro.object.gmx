@@ -86,7 +86,7 @@ global.ySig = 800;
             <string>/// Clic para continuar
 
 draw_text(x, y, "Intro");
-draw_text(x, y+100, "Presiona cualquier tecla para continuar");
+draw_text(x, y+24, "Presiona cualquier tecla para continuar");
 
 if keyboard_check_pressed(vk_anykey) 
 or mouse_check_button_pressed(mb_any) {
