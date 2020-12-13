@@ -4,26 +4,29 @@ Juego de Navidad 2019
 Género/Clasificación: RPG  
 Plataforma y hardware: Windows, Android. Se controla con teclado, joystick o pantalla táctil  
 Audiencia: Jugadores casuales  
-Fecha de publicación: 19 dic 2019  
+Fecha de publicación propuesta: 19 dic 2019  
+¡Retraso terrible! Nueva fecha de publicación estimada: 22 dic 2020
 
 ## Historia
 No tiene historia concreta. Hay que resolver pequeños retos en un pueblo (o ciudad pequeña)
-llamado “Llano Esmeralda” que se prepara para celebrar la Navidad.
+llamado "Valle Seco" o “Llano Esmeralda” que se prepara para celebrar la Navidad.
 
 El juego debe mostrar varios elementos tradicionales de la celebración de Navidad en México.
 La mecánica principal del juego es romper piñatas.
 
 El protagonista es un niño que llegó al pueblo hace poco y comienza a conocer a sus habitantes.
+Opcional: 
 El nombre del niño es proporcionado por el jugador, por defecto es "Aldo".
 Otras características también podrían ser ajustadas por el jugador.
 
-Los demás personajes del juego están basados en personas del mundo real.
+Algunos personajes del juego están basados en personas del mundo real.
 
 ## Flujo
 *Cómo inicia el juego. Cómo mejora el jugador cuando el reto incrementa. Descripción del sistema:
 experiencia, puntos, dinero, premios. Cómo se relaciona la historia con lo anterior.*
 
 Antes de comenzar con la historia se pide al jugador que escriba el nombre del protagonista.
+Lo anterior es opcional. Se requiere mucho tiempo para implementar el sistema de escritura, se usará un nombre fijo.
 
 Al iniciar el juego, el prota (Aldo) aparece frente a su casa y dice que hoy le gustaría conocer
 el pueblo. Si entra a su casa encontrará a sus padres ordenando varias cosas. Si habla con ellos,
@@ -46,11 +49,13 @@ mejor rompedor de piñatas (del año). En seguida le pide a Aldo que pruebe con 
 que está armando. En este momento inicial el entrenamiento de la mecánica principal del juego:
 romper piñatas.
 
+¿Cómo pasar por el entrenamiento de piñatas sin que parezca forzado?
+
 En el entrenamiento, Aldo obtiene el primer instrumento para romper piñatas "Palo de Escoba".
 Al explorar el pueblo y romper piñatas más resistentes se obtienen otros instrumentos.
 
-En Noche Buena se realiza la posa da más grande y se presenta la piñata más resistente.
-Para romperla se necesitasn los mejores instrumentos, los mejores amuletos y pasar varias rondas.
+En Noche Buena se realiza la posada más grande y se presenta la piñata más resistente.
+Para romperla se necesitan los mejores instrumentos, los mejores amuletos y pasar varias rondas.
 Si el jugador logra destruirla, se convierte en el mejor rompedor de piñatas del año.
 
 ## Controles
@@ -105,6 +110,8 @@ Los golpes débiles tienen altas probabilidades de acertar y corto alcance.
 Cuando se realizan varios golpes exitosos seguidos se puede realizar un movimiento especial.
 [Proponer movimientos especiales].
 
+Pueden existir diferentes niveles de entrenamiento. ¿Cómo se paga por el entrenamiento?
+
 **Temporizador**
 En la parte superior de la ventana aparece una barra de tiempo. Al lanzar un golpe se reduce
 una longitud predeterminada (podría depender de la velocidad de ataque).
@@ -134,10 +141,14 @@ Al norte hay una presa.
 Los gráficos del juego son fotografías y dibujos feos que han sido procesados por una
 red neuronal para que parezcan dibujados con acuarela y otros tipos de pintura.
 
+**Nueva elección de gráficos** Los gráficos serán dibujados a mano, escaneados y vectorizados.
+Coloreados con patrones vectorizados y de fotografías o colores planos.  
+
 Hay gran diversidad de colores, pero con tendencia al gris y al marron para que parezca que
-el clima es frío y seco, la época es de melancolía y las luces de navidad resalten.
+el clima es frío y seco, la época es de melancolía y las luces de navidad resalten.  
 
 Evitar HUD.  
+¿Cómo rellenar el esapacio en las escenas de romper piñatas?  
 
 Al iniciar el ejecutable aparece la pantalla de título (en una esquina aparece el logo de CGM
 adornado con luces de navidad) y un menú con 3 opciones:
@@ -202,6 +213,7 @@ Hay varias personas con las que se puede hablar.
 *Escenas, incentivos, juegos parecidos, competencia, cualquier cosa que no hayamos puesto en las secciones anteriores.*
 
 Está basado en los juegos de Pokémon.
+Referencias para diseñar a los personajes: Pokémon, Padrinos Mágicos.
 
 ### Investigación
 https://es.wikipedia.org/wiki/Rebozo
