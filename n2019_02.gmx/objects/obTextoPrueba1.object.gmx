@@ -80,12 +80,12 @@ nl = ds_list_size(lineas); //número de líneas
 //extraer las palabras de cada línea
 for (i=0; i&lt;nl; i++) {
    // lista de palabras
-   palabras = string_parse(lineas[|i], " ", true);
+   palabras = string_parse(ds_list_find_value(lineas, i), " ", true);
    np = ds_list_size(palabras); //número de palabras
    
    // copiar palabras a un array
    for (j=0; j&lt;np; j++) {
-      P[k] = palabras[|j] + " "; //copiar palabra + espacio
+      P[k] = ds_list_find_value(palabras, j) + " "; //copiar palabra + espacio
       X[k] = xx; //pos h de la palabra
       Y[k] = yy; //pos v de la palabra
       xx += string_width(P[k]); //pos h de la sig palabra

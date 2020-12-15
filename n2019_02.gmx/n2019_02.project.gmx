@@ -42,8 +42,6 @@
     <object>objects\obNPC</object>
     <object>objects\obSara</object>
     <object>objects\obTextoPrueba1</object>
-    <object>objects\obTextoPrueba2</object>
-    <object>objects\obTextoPrueba3</object>
     <object>objects\obCuadroAyuda</object>
   </objects>
   <rooms name="rooms">
