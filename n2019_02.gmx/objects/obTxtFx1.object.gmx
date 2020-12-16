@@ -53,15 +53,16 @@ en varias partes y va apareciendo poco a poco.
           <argument>
             <kind>1</kind>
             <string>/// Inicializar Variables
+//chr(10) //new line
+//chr(13) //carriage return
 
 draw_set_font(fnCourier);
 
-texto = 
-"¡Hola mundo! Este es el texo que usaremos
-para probar los efectos especiales.
-
-Estos efectos no son necesarios, pero nos
-gusta complicarnos la vida ...";
+texto =
+"¡Hola mundo! Este es el texo que usaremos#"+
+"para probar los efectos especiales.##"+
+"Estos efectos no son necesarios, pero nos#"+
+"gusta complicarnos la vida ...";
 
 P[0] = 0; //array de palabras
 X[0] = 0; //posición horizontal de cada palabra
@@ -73,8 +74,7 @@ yy = 0; //pos v actual en pixels
 k = 0; //indice para el array de todas las palabras
 
 // lista de lineas
-lineas = string_parse(texto, "
-", false);
+lineas = string_parse(texto, "#", false);
 nl = ds_list_size(lineas); //número de líneas
 
 //extraer las palabras de cada línea
@@ -88,6 +88,8 @@ for (i=0; i&lt;nl; i++) {
       P[k] = ds_list_find_value(palabras, j) + " "; //copiar palabra + espacio
       X[k] = xx; //pos h de la palabra
       Y[k] = yy; //pos v de la palabra
+      S[k] = 0;
+      A[k] = 0;
       xx += string_width(P[k]); //pos h de la sig palabra
       k++; //incrementar indice
    }
@@ -111,12 +113,12 @@ S[k-1] = 0; //escala
 A[k-1] = 0; //alfa
 */
 // Prueba 3: aparecer varias palabra en secuencia
-num = 8; //numero de palabras que aparecen
+num = 6; //numero de palabras que aparecen
 val = 1/num; //valor en el que se aparece la sig palabra
 index = 0; //index dentro del array de palabras
-delta = 0.1; //incremento de escala y opacidad
-S[k-1] = 0; //escala
-A[k-1] = 0; //alfa
+delta = 0.15; //incremento de escala y opacidad
+//S[k-1] = 0; //escala
+//A[k-1] = 0; //alfa
 
 //show_debug_message(P);
 //draw_text_transformed(xx[i], yy[i], p[i], 1, s[i], 0);
@@ -164,7 +166,9 @@ if (index &lt; k) {//si no han aparecido todas las palabras
       //y no ha aparecido por completo
       if (i &gt;= 0) and (A[i] &lt; 1) {
          A[i] += delta;
+         if (A[i] &gt; 1) A[i] = 1;
          S[i] += delta;
+         if (S[i] &gt; 1) S[i] = 1;
       }
    }
    //si la palabra ha aparecido lo suficiente,
@@ -173,7 +177,6 @@ if (index &lt; k) {//si no han aparecido todas las palabras
 }
 
 draw_set_alpha(1);
-
 if keyboard_check_pressed(ord('R')) room_restart();
 </string>
           </argument>

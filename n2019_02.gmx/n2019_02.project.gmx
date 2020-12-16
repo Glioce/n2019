@@ -41,7 +41,7 @@
     <object>objects\obPuerta</object>
     <object>objects\obNPC</object>
     <object>objects\obSara</object>
-    <object>objects\obTextoPrueba1</object>
+    <object>objects\obTxtFx1</object>
     <object>objects\obCuadroAyuda</object>
   </objects>
   <rooms name="rooms">

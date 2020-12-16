@@ -185,26 +185,27 @@ if mouse_check_button_pressed(mb_left) {//si se hace clic
     //revisar si se hizo clic sobre una salida o una puerta
     salida = instance_position(mouse_x, mouse_y, obSalida);
     //puerta = instance_position(mouse_x, mouse_y, obSalida);
-    show_debug_message(salida);
+    //show_debug_message(salida);
     //show_debug_message(puerta);
     
-    //si clic sobre una salida y no sobre una puerta
-    //el punto meta queda fuera de la room
-    if (salida &lt;&gt; noone)
-    if (salida.object_index == obSalida) {
+    //si clic sobre una salida o puerta
+    if (salida &lt;&gt; noone) {
         metaX += lengthdir_x(64, salida.image_angle);
         metaY += lengthdir_y(64, salida.image_angle);
-        show_debug_message("SALIDA");
+        //show_debug_message("SALIDA");
     }
    
     //si se encuentra una ruta, seguirla
-    if mp_grid_path(grid, ptJugador, x, y, metaX, metaY, true) {
+    if mp_grid_path(grid, ptJugador, x, y, metaX, metaY, true)
+    {
+        //seguir path con velocidad normal y detenerse al final
         path_start(ptJugador, v, path_action_stop, true);
+        
+        //si ya existe una marca, destruirla y crear una nueva
         if instance_exists(obMarca) instance_destroy(obMarca);
         instance_create(marcaX, marcaY, obMarca);
       
-        //si se hace clic sobre un objeto salida,
-        //cambiar sprite de obMarca
+        //si la marca está sobre una salida, cambiar sprite de obMarca
         if (salida &lt;&gt; noone) {
             obMarca.sprite_index = spMarcaSalida;
             obMarca.image_angle = salida.image_angle;
