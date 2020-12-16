@@ -46,13 +46,13 @@
     <object>objects\obTxtFx1</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm7</room>
     <room>rooms\roomIntro</room>
     <room>rooms\rmMotor00</room>
     <room>rooms\rmMotor01</room>
     <room>rooms\rmMotor10</room>
     <room>rooms\rmMotor11</room>
     <room>rooms\rmMotorCasa</room>
+    <room>rooms\rm7</room>
     <room>rooms\rm0</room>
   </rooms>
   <constants number="4">

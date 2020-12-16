@@ -28,6 +28,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnCourier</font>
+    <font>fonts\fn1</font>
   </fonts>
   <objects name="objects">
     <object>objects\obIntro</object>

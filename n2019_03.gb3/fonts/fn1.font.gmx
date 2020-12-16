@@ -7,7 +7,7 @@
   <charset>0</charset>
   <aa>3</aa>
   <ranges>
-    <range0>0,255</range0>
+    <range0>32,127</range0>
   </ranges>
   <glyphs/>
   <image>fn1.png</image>
