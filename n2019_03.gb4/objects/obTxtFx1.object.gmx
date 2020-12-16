@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<object>
+  <spriteName>&lt;undefined&gt;</spriteName>
+  <solid>0</solid>
+  <visible>-1</visible>
+  <depth>0</depth>
+  <persistent>0</persistent>
+  <maskName>&lt;undefined&gt;</maskName>
+  <parentName>&lt;undefined&gt;</parentName>
+  <events>
+    <event enumb="0" eventtype="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <useapplyto>-1</useapplyto>
+        <isquestion>0</isquestion>
+        <exetype>2</exetype>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Inicializar Variables&#13;
+//chr(10) //new line&#13;
+//chr(13) //carriage return&#13;
+&#13;
+//draw_set_font(fnCourier);&#13;
+&#13;
+texto =&#13;
+"¡Hola mundo! Este es el texo que usaremos#"+&#13;
+"para probar los efectos especiales.##"+&#13;
+"Estos efectos no son necesarios, pero nos#"+&#13;
+"gusta complicarnos la vida ...";&#13;
+&#13;
+P[0] = 0; //array de palabras&#13;
+X[0] = 0; //posición horizontal de cada palabra&#13;
+Y[0] = 0; //posición vertical de cada palabra&#13;
+S[0] = 0; //escala de cada palabra&#13;
+A[0] = 0; //alfa (opacidad) de cada palabra&#13;
+xx = 0; //pos h actual en pixels&#13;
+yy = 0; //pos v actual en pixels&#13;
+k = 0; //indice para el array de todas las palabras&#13;
+&#13;
+// lista de lineas&#13;
+lineas = string_parse(texto, "#", false);&#13;
+nl = ds_list_size(lineas); //número de líneas&#13;
+&#13;
+//extraer las palabras de cada línea&#13;
+for (i=0; i&lt;nl; i++) {&#13;
+   // lista de palabras&#13;
+   palabras = string_parse(ds_list_find_value(lineas, i), " ", true);&#13;
+   np = ds_list_size(palabras); //número de palabras&#13;
+   &#13;
+   // copiar palabras a un array&#13;
+   for (j=0; j&lt;np; j++) {&#13;
+      P[k] = ds_list_find_value(palabras, j) + " "; //copiar palabra + espacio&#13;
+      X[k] = xx; //pos h de la palabra&#13;
+      Y[k] = yy; //pos v de la palabra&#13;
+      S[k] = 0;&#13;
+      A[k] = 0;&#13;
+      xx += string_width(P[k]); //pos h de la sig palabra&#13;
+      k++; //incrementar indice&#13;
+   }&#13;
+   xx = 0; //reiniciar pos h&#13;
+   yy += string_height(P[k-1]); //actualizar pos v&#13;
+   ds_list_destroy(palabras); //destruir lista&#13;
+}&#13;
+ds_list_destroy(lineas); //destruir lista&#13;
+// k ahora guarda tamaño del array de palabras&#13;
+&#13;
+// Prueba 1: mostrar todo el texto con alfa y escala gradual&#13;
+/*for (i=0; i&lt;k; i++) {&#13;
+   S[i] = (k - i)/k; //escala&#13;
+   A[i] = S[i]; //alfa&#13;
+}*/&#13;
+&#13;
+// Prueba 2: aparecer palabra por palabra&#13;
+/*index = 0; //index dentro del array de palabras&#13;
+delta = 0.1; //incremento de escala y opacidad&#13;
+S[k-1] = 0; //escala&#13;
+A[k-1] = 0; //alfa&#13;
+*/&#13;
+// Prueba 3: aparecer varias palabra en secuencia&#13;
+num = 6; //numero de palabras que aparecen&#13;
+val = 1/num; //valor en el que se aparece la sig palabra&#13;
+index = 0; //index dentro del array de palabras&#13;
+delta = 0.15; //incremento de escala y opacidad&#13;
+//S[k-1] = 0; //escala&#13;
+//A[k-1] = 0; //alfa&#13;
+&#13;
+//show_debug_message(P);&#13;
+//draw_text_transformed(xx[i], yy[i], p[i], 1, s[i], 0);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event enumb="0" eventtype="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <useapplyto>-1</useapplyto>
+        <isquestion>0</isquestion>
+        <exetype>2</exetype>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Dibujar texto desde array&#13;
+//draw_text(0, 0, texto);&#13;
+//draw_text(0, 0, S[15]);&#13;
+&#13;
+for (i=0; i&lt;k; i++) {&#13;
+   //draw_text(x + X[i], y + Y[i], P[i]);&#13;
+   draw_set_alpha(A[i]);&#13;
+   //draw_set_alpha(1);&#13;
+   draw_text_transformed(x + X[i], y + Y[i], P[i], 1, S[i], 0);&#13;
+}&#13;
+&#13;
+/*if (index &lt; k) {&#13;
+   if (A[index] &lt; 1) {&#13;
+      A[index] += delta;&#13;
+      S[index] += delta;&#13;
+   }&#13;
+   else index++;&#13;
+}*/&#13;
+&#13;
+if (index &lt; k) {//si no han aparecido todas las palabras&#13;
+   for (i=index; i&gt;index-num; i--) {//aparecer varias palabras a la vez&#13;
+      //si es una pos válida dentro del array&#13;
+      //y no ha aparecido por completo&#13;
+      if (i &gt;= 0) and (A[i] &lt; 1) {&#13;
+         A[i] += delta;&#13;
+         S[i] += delta;&#13;
+      }&#13;
+   }&#13;
+   //si la palabra ha aparecido lo suficiente,&#13;
+   //comienza a aparecer la siguiente&#13;
+   if (A[index] &gt;= val) and (index &lt; k-1) index++;&#13;
+}&#13;
+&#13;
+draw_set_alpha(1);&#13;
+if keyboard_check_pressed(ord('R')) room_restart();</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
+  <PhysicsObject>0</PhysicsObject>
+  <PhysicsObjectSensor>0</PhysicsObjectSensor>
+  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
+  <PhysicsObjectRestitution>0.1</PhysicsObjectRestitution>
+  <PhysicsObjectGroup>0</PhysicsObjectGroup>
+  <PhysicsObjectLinearDamping>0.1</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.1</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.2</PhysicsObjectFriction>
+  <PhysicsObjectAwake>-1</PhysicsObjectAwake>
+  <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
+  <PhysicsShapePoints/>
+</object>

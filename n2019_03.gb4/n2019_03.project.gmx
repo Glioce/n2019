@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<assets>
+  <Configs name="configs">
+    <Config>Configs\Default</Config>
+  </Configs>
+  <sprites name="sprites">
+    <sprite>sprites\sprite0</sprite>
+    <sprite>sprites\spAldo0</sprite>
+    <sprite>sprites\spBloque</sprite>
+    <sprite>sprites\spMarca</sprite>
+    <sprite>sprites\spHablar</sprite>
+    <sprite>sprites\spMarcaSalida</sprite>
+    <sprite>sprites\spSalida</sprite>
+    <sprite>sprites\spSara</sprite>
+    <sprite>sprites\spCuadroAyuda</sprite>
+  </sprites>
+  <sounds name="sound">
+    <sound>sound\snPuebloTranquilo</sound>
+  </sounds>
+  <backgrounds name="background">
+    <background>background\bgCelda</background>
+  </backgrounds>
+  <paths name="paths">
+    <path>paths\ptJugador</path>
+  </paths>
+  <scripts name="scripts">
+    <script>scripts\string_parse.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnCourier</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\obIntro</object>
+    <object>objects\obJugador</object>
+    <object>objects\obMusica</object>
+    <object>objects\obBloque</object>
+    <object>objects\obCam</object>
+    <object>objects\obMarca</object>
+    <object>objects\obSalida</object>
+    <object>objects\obPuerta</object>
+    <object>objects\obNPC</object>
+    <object>objects\obSara</object>
+    <object>objects\obTextoPrueba1</object>
+    <object>objects\obCuadroAyuda</object>
+    <object>objects\obTxtFx1</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm7</room>
+    <room>rooms\roomIntro</room>
+    <room>rooms\rmMotor00</room>
+    <room>rooms\rmMotor01</room>
+    <room>rooms\rmMotor10</room>
+    <room>rooms\rmMotor11</room>
+    <room>rooms\rmMotorCasa</room>
+    <room>rooms\rm0</room>
+  </rooms>
+  <constants number="4">
+    <constant name="ESTADO_NORMAL">0</constant>
+    <constant name="ESTADO_MUERTO">1</constant>
+    <constant name="ESTADO_DIALOGO">2</constant>
+    <constant name="ESTADO_PAUSA">3</constant>
+  </constants>
+  <help>
+    <rtf>help.rtf</rtf>
+  </help>
+</assets>
