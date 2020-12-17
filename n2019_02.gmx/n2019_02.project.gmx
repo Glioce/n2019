@@ -46,12 +46,25 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\roomIntro</room>
-    <room>rooms\rmMotor00</room>
-    <room>rooms\rmMotor01</room>
-    <room>rooms\rmMotor10</room>
-    <room>rooms\rmMotor11</room>
-    <room>rooms\rmMotorCasa</room>
-    <room>rooms\rm0</room>
+    <room>rooms\rmPoniente</room>
+    <room>rooms\rmCasaAldo</room>
+    <room>rooms\rmCasaAnciano</room>
+    <room>rooms\rmCentral</room>
+    <room>rooms\rmIglesia</room>
+    <room>rooms\rmPresa</room>
+    <room>rooms\rmOriente</room>
+    <room>rooms\rmCasaSara</room>
+    <room>rooms\rmBosque</room>
+    <room>rooms\rmCementerio</room>
+    <room>rooms\rmCabana</room>
+    <rooms name="TestMotor">
+      <room>rooms\rm0</room>
+      <room>rooms\rmMotor00</room>
+      <room>rooms\rmMotor01</room>
+      <room>rooms\rmMotor10</room>
+      <room>rooms\rmMotor11</room>
+      <room>rooms\rmMotorCasa</room>
+    </rooms>
   </rooms>
   <constants number="4">
     <constant name="ESTADO_NORMAL">0</constant>

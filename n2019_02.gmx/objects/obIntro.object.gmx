@@ -57,7 +57,7 @@ draw_set_colour(c_white);
 
 // jugador
 // Variables para posicionar al jugador al cambiar de room
-global.roomSig = rmMotor00; //room inicial
+global.roomSig = rmPoniente; //room inicial
 global.dirSig = 270; //dirección a la que mira el personaje
 global.xSig = 800; //pos x
 global.ySig = 800; //pos y
