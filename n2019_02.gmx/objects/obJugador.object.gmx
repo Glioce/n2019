@@ -68,14 +68,18 @@ Macros --&gt; All configurations
             <kind>1</kind>
             <string>/// Inicializar Variables
 
+if (global.posSigDefinida) {
+    x = global.xSig; //posicionarse en el punto indicado
+    y = global.ySig; //al salir de la room anterior
+    direction = global.dirSig; //inicia mirando hacia abajo
+}
+global.posSigDefinida = true;
+
 //x += 32; //desplazar para alinear a la rejilla
 //y += 32;
-x = global.xSig; //posicionarse en el punto indicado
-y = global.ySig; //al salir de la room anterior
 vx = 0; //velocidad horizontal
 vy = 0; //velocidad vertical
 v = 8; //velocidad de desplazamiento
-direction = global.dirSig; //inicia mirando hacia abajo
 dirPrev = direction; //direction previa
 
 // Las siguientes variables se utilizan cuando el personaje
@@ -162,10 +166,10 @@ if (ejeX &lt;&gt; 0 or ejeY &lt;&gt; 0) //si el joystick está desplazado
 
    //Asigna la dirección (se usará para cambiar el sprite)
    direction = point_direction(0, 0, ejeX, ejeY);
-   if (direction &lt;&gt; dirPrev) {//si direction ha cambiado
+   /*if (direction &lt;&gt; dirPrev) {//si direction ha cambiado
       tReposo = T_REPOSO; //iniciar temporizador
       dirPrev = direction; //actualizar direction previa
-   }
+   }*/
    
    //Comienza a moverse cuando termina el tiempo de reposo
    if (tReposo &lt;= 0) {
@@ -305,7 +309,7 @@ puerta = instance_position(x, y, obPuerta);
 //puerta = instance_place(x, y, obPuerta);
 
 // izquierda       derecha        arriba     abajo
-if (x &lt; 0) or (x &gt; room_width) or (y &lt; 0) or (y &gt; room_height) or (puerta &lt;&gt; noone) {
+if ((x &lt; 0) or (x &gt; room_width) or (y &lt; 0) or (y &gt; room_height) or (puerta &lt;&gt; noone)) {
    //obtener id de instancia de objeto salida
    //tal vez ya se tiene el id si se hizo clic en la salida,
    //pero es necesario obtenerlo si el jugador avanza usando el teclado
@@ -315,6 +319,7 @@ if (x &lt; 0) or (x &gt; room_width) or (y &lt; 0) or (y &gt; room_height) or (p
    global.ySig = y + salida.deltaY;
    global.dirSig = salida.image_angle;
    
+   global.posSigDefinida = true;
    room_goto(global.roomSig);
 }
 

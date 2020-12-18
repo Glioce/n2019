@@ -62,6 +62,7 @@ global.dirSig = 270; //dirección a la que mira el personaje
 global.xSig = 800; //pos x
 global.ySig = 800; //pos y
 
+global.posSigDefinida = false;
 </string>
           </argument>
         </arguments>

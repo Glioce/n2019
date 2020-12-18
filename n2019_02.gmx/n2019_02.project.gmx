@@ -46,6 +46,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\roomIntro</room>
+    <room>rooms\rmMenuPrincipal</room>
     <room>rooms\rmPoniente</room>
     <room>rooms\rmCasaAldo</room>
     <room>rooms\rmCasaAnciano</room>
