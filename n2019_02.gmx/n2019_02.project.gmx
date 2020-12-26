@@ -3,9 +3,16 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snPuebloTranquilo</sound>
+    <sound>sound\snBeepHightone</sound>
+    <sound>sound\snBeepScratchy</sound>
+    <sound>sound\snBeepTimber</sound>
+    <sound>sound\snWarmGuitar</sound>
+    <sound>sound\snBeepXylo</sound>
+    <sound>sound\snSlideScissors</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
@@ -17,6 +24,9 @@
     <sprite>sprites\spSalida</sprite>
     <sprite>sprites\spSara</sprite>
     <sprite>sprites\spCuadroAyuda</sprite>
+    <sprite>sprites\spGrad00</sprite>
+    <sprite>sprites\spRec</sprite>
+    <sprite>sprites\spRec2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgCelda</background>
@@ -26,9 +36,12 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\string_parse.gml</script>
+    <script>scripts\draw_slice9.gml</script>
+    <script>scripts\draw_slice9_color.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnCourier</font>
+    <font>fonts\fnPurisa</font>
   </fonts>
   <objects name="objects">
     <object>objects\obIntro</object>
@@ -43,10 +56,13 @@
     <object>objects\obSara</object>
     <object>objects\obTxtFx1</object>
     <object>objects\obCuadroAyuda</object>
+    <object>objects\obMenuPrincipal</object>
+    <object>objects\obDummy</object>
+    <object>objects\obBoton</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\roomIntro</room>
     <room>rooms\rmMenuPrincipal</room>
+    <room>rooms\roomIntro</room>
     <room>rooms\rmPoniente</room>
     <room>rooms\rmCasaAldo</room>
     <room>rooms\rmCasaAnciano</room>
