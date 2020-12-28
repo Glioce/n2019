@@ -119,6 +119,9 @@ npc = noone;
 
 // máquina de estados
 estado = ESTADO_NORMAL;
+
+txt = instance_create(0,0, obTxtFx);
+txt.texto = "Es buen momento para explorar el pueblo.";
 </string>
           </argument>
         </arguments>
@@ -360,7 +363,6 @@ if (npc &lt;&gt; noone) //{// si hay un NPC cerca
       show_debug_message("DIALOGO"); // inicia diálogo
    }  
 }
-
 
 </string>
           </argument>

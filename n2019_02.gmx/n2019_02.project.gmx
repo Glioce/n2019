@@ -55,6 +55,7 @@
     <object>objects\obNPC</object>
     <object>objects\obSara</object>
     <object>objects\obTxtFx1</object>
+    <object>objects\obTxtFx</object>
     <object>objects\obCuadroAyuda</object>
     <object>objects\obMenuPrincipal</object>
     <object>objects\obDummy</object>

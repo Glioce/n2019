@@ -307,6 +307,13 @@ draw_set_color(c_white);
 //show_debug_message(vk_enter);
 //show_debug_message(vk_return); //igual a vk_enter
 //show_debug_message(vk_backspace);
+
+/*
+if (os_type == os_android)
+    show_debug_message("ES ANDROID");
+else
+    show_debug_message("NO ES ANDROID");
+*/
 </string>
           </argument>
         </arguments>
