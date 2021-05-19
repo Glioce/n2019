@@ -233,6 +233,9 @@ Ukiyoe         | Sketch 2 | Artist’s sketch
 Abstractionism | Structuralism | Joy
 Pop Art        | Color Fantasy | x
 
+### Lugares para obtener música y efectos de sonido
+https://freesound.org/people/GameAudio/packs/13940/  
+
 ### Ideas anteriores para la historia
 El juego narra una historia triste que ocurre un poco antes de navidad.
 Opciones: Anciano enfermo, persona joven deprimida que decide ayudar a otros.
