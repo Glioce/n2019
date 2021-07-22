@@ -30,7 +30,7 @@ Lo anterior es opcional. Se requiere mucho tiempo para implementar el sistema de
 
 Al iniciar el juego, el prota (Aldo) aparece frente a su casa y dice que hoy le gustaría conocer
 el pueblo. Si entra a su casa encontrará a sus padres ordenando varias cosas. Si habla con ellos,
-después de varias frases dirán algo como "si no me vas a ayudar, no me estés interrumpiendo".
+después de varias frases dirán algo como "si no me vas a ayudar, no me interrumpas".
 
 En la calle hay varias personas con las que se puede hablar. Un hombré le dirá a Aldo que hoy
 inician las Posadas.
@@ -41,7 +41,7 @@ Después de caminar un poco, Aldo se encontrará con Sara que está adornando un
 Sara pedirá ayuda y el jugador podría aceptar o no. Si acepta, Sara descubrirá que ha perdido
 la estrella que adorna la punta del árbol, entonces le pedirá a Aldo que la ayude a encontrarla.
 
-Podría haber varios objetos perdidos, pertenecientes a diferentes personajes. Al encontrarlos
+En el pueblo hay objetos perdidos, pertenecientes a diferentes personajes. Al encontrarlos
 y entregarlos se obtendrían recompensas.
 
 En un lugar se están armando piñatas. Una persona menciona que al terminar las Posadas se elige al
@@ -82,7 +82,7 @@ El botón de interacción selecciona el ataque o movimiento.
 *¿Qué elementos enganchan al jugador? División de la secuencia de juego: niveles, rounds, mapas.
 Minijuegos. Diferencias en algunas plataformas. Modos de juego que tendrá.*
 
-El juego puede ser terminado en poco tiempo, tal vez 15 minutos.
+El juego puede ser terminado en poco tiempo, tal vez 20 minutos.
 El jugador se puede sentir atraído por la temática alegre y el estilo gráfico poco común.
 
 El gameplay se divide en 2 partes: exploracion y romper piñatas.
@@ -98,8 +98,8 @@ de la piñata todo el tiempo.
 Cuando tiene los ojos vendados, la posición de la piñata solo es visible cuando
 se realiza un golpe exitoso.
 Si la velocidad de desplazamiento de la piñata es baja o la velocidad de ataque es alta,
-se puede hacia dónde se moverá (empieza a desplazarse mientras se hace invisible).
-Varias piñatas se mueven en patrones cortos para que sea más fácil predecir el movimiento.
+se puede ver hacia dónde se moverá (empieza a desplazarse mientras se hace invisible).
+Varias piñatas se mueven en patrones para que sea más fácil predecir el movimiento.
 
 En la parte inferior de la ventana aparece la lista de golpes y movimientos.
 No habrá muchos. Aldo aprende movimientos en el transcurso del juego.
@@ -113,7 +113,7 @@ Cuando se realizan varios golpes exitosos seguidos se puede realizar un movimien
 Pueden existir diferentes niveles de entrenamiento. ¿Cómo se paga por el entrenamiento?
 
 **Temporizador**
-En la parte superior de la ventana aparece una barra de tiempo. Al lanzar un golpe se reduce
+En la parte superior de la ventana aparece una barra de tiempo o energía. Al lanzar un golpe se reduce
 una longitud predeterminada (podría depender de la velocidad de ataque).
 Mientras se elije el siguiente movimiento, la barra de tiempo se reduce lentamente
 obligando al jugador a elegir rápido.
@@ -123,17 +123,17 @@ Cuando se rompe la piñata caen dulces y el jugador debe presionar varias veces 
 lo más rápido que pueda para recolectar la mayor cantidad de dulces.
 La cantidad de dulces recolectados podría servir para determinar el rango del jugador
 al terminar el juego.
-En otras situaciones también se pueden recolectar dulces.
+En el pueblo, hay otros lugares donde también se pueden recolectar dulces.
 
 ## Mundo
 *Lugares, ambientes, humores, evocaciones, y su relación con la historia.
 Cómo se conectan los lugares, para esto es bueno usar diagramas.*
 
-El mundo del juego es un pueblo pequeño muy parecido a la vida real.
+El mundo del juego es un pueblo pequeño basado en pueblos de la vida real.
 Hay dos barrios que se pueden explorar: uno al este y el otro al oeste.
 En el centro del pueblo hay un parque y una iglesia.
-En el sur hay un bosque de árboles secos y pinos. En lo profundo del bosque hay una cabaña.
-Al norte hay una presa.
+Al norte hay un bosque de árboles secos y pinos. En lo profundo del bosque hay una cabaña, que según la leyenda, pertenece a una bruja.
+En el sur hay una presa.
 
 ## Gráficos y música
 *Descripción de los menús. Tipos de música y efectos de sonido. Colores, humor y acuerdos de diseño.*
@@ -145,7 +145,7 @@ red neuronal para que parezcan dibujados con acuarela y otros tipos de pintura.
 Coloreados con patrones vectorizados y de fotografías o colores planos.  
 
 Hay gran diversidad de colores, pero con tendencia al gris y al marron para que parezca que
-el clima es frío y seco, la época es de melancolía y las luces de navidad resalten.  
+el clima es frío y seco, la época es de melancolía y las luces de navidad resaltan.  
 
 Evitar HUD.  
 ¿Cómo rellenar el esapacio en las escenas de romper piñatas?  
@@ -178,8 +178,10 @@ golosinas (que es como la puntuación global).
 ### Instrumentos
 1. Palo de Escoba - Bajo poder de ataque y corto alcance. Se podría romper después de varios usos.
 2. Tabla Astillada - Alto poder de ataque, corto alcance y baja velocidad.
-3. Rama Espiral - Bajo poder de ataque, largo alcance y alta velocidad.
-3. Bat de Beisbol - Alto poder de ataque, corto alcance y alta velocidad.
+3. Rama Retorcida - Bajo poder de ataque, largo alcance y alta velocidad.
+3. Bat de Madera - Alto poder de ataque, corto alcance y alta velocidad.
+4. Bat de Aluminio
+5. Tubo
 
 ### Atributos
 + Poder de ataque
