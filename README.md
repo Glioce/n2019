@@ -5,11 +5,11 @@ Género/Clasificación: RPG
 Plataforma y hardware: Windows, Android. Se controla con teclado, joystick o pantalla táctil  
 Audiencia: Jugadores casuales  
 Fecha de publicación propuesta: 19 dic 2019  
-¡Retraso terrible! Nueva fecha de publicación estimada: 22 dic 2020
+¡Retraso terrible! No hay fecha estimada de publicación.
 
 ## Historia
 No tiene historia concreta. Hay que resolver pequeños retos en un pueblo (o ciudad pequeña)
-llamado "Valle Seco" o “Llano Esmeralda” que se prepara para celebrar la Navidad.
+llamado "Valle Seco" o “Llano Esmeralda” que se prepara para celebrar la Navidad. (Nota: pensar en otros nombres para el pueblo)
 
 El juego debe mostrar varios elementos tradicionales de la celebración de Navidad en México.
 La mecánica principal del juego es romper piñatas.
