@@ -45,6 +45,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obIntro</object>
+    <object>objects\obControladorBatalla</object>
     <object>objects\obJugador</object>
     <object>objects\obMusica</object>
     <object>objects\obBloque</object>
@@ -62,6 +63,7 @@
     <object>objects\obBoton</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmBatalla</room>
     <room>rooms\rmMenuPrincipal</room>
     <room>rooms\roomIntro</room>
     <room>rooms\rmPoniente</room>

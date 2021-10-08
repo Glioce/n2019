@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>/// Info
 /*************************************
+Este es el controlador de batalla.
+Sirve para inicializar variables del modo batalla.
+Otras funciones no se han asignado.
+
 Este objeto se crea cuando inicia el juego.
 Muestra la introducción, define variables globales
 y carga configuraciones
