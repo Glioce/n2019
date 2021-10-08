@@ -64,9 +64,18 @@ Lo que se puede guardar es:
 + bits (flags) de eventos vistos
 
 ## Sistema de Diálogos/Conversaciones
-
+Cada personaje podría tener solo una secuencia de coversaciones, ese el sistema más fácil.
+Pero si se tienen diferentes secuencias, la secuencia que debe aparecer se debe guardar
+en variables globales, tal vez en flags.
 
 ## Registro de conversaciones
 Lo más seguro es que esto no se implemente. 
 En algún se menú se podría acceder a un registro de las 
 últimas conversaciones, por si es necesario leer otra vez.
+
+## Sistema de "batalla"
+Primero crear una room especial para probar el sistema aislado de las demás partes
+del juego. En esta room se van a probar máquinas de estados, posición de los
+elementos gráficos, etc.
+
+El primer objeto del sistema de batalla puede ser un controlador general.
