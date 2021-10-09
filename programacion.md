@@ -7,7 +7,12 @@ El tamaño de las celdas en que se divide el escenario es 64 x 64 px
 1280 / 64 = 20  
 720 / 64 = 11.25  
 Se buscará crear pocas rooms pequeñas, pero con varios detalles ocultos
-para que no sean demasiado simples
+para que no sean demasiado simples.
+
+No está planeado implementar un sistema para ajustar el juego a diferentes resoluciones,
+sin embargo, en pantallas fijas (como en las batallas) los elementos importantes aparecerán
+en el centro de la room para poder recortar las orillas si alcanza el tiempo
+para hacer un sistema de ajuste.
 
 ## Conexión de rooms
 Cada room puede tener una posición global. La posición de cada room se guarda en el objeto
@@ -18,7 +23,7 @@ sobre esos objetos el jugador avanza automáticamente hasta salir de la room act
 La salida se puede hacer de dos formas:
 1. Se crea una ruta normal y se marca la celda de salida. Al terminar la primera ruta
 se inicia una segunda ruta que mueve al personaje fuera de la room.
-2. Se crea una ruta con el punto final fuera de la room, pero la celca de salida
+2. Se crea una ruta con el punto final fuera de la room, pero la celda de salida
 se marca una celda atrás.
 
 Se elegirá el método 1.
@@ -79,3 +84,12 @@ del juego. En esta room se van a probar máquinas de estados, posición de los
 elementos gráficos, etc.
 
 El primer objeto del sistema de batalla puede ser un controlador general.
+
+La pantalla de batalla tiene los elementos importantes centrados en la room.
+Esto es para poder recortar las orillas si se implementa un sistema de
+ajuste de pantalla.
+
+La room mide 20 x 11.25 celdas. Un cudaro centrado que no toque las orillas
+puede medir 10 x 10 celdas. Se busca que los elementos importantes queden
+más o menos en ese espacio.
+
