@@ -27,6 +27,8 @@
     <sprite>sprites\spGrad00</sprite>
     <sprite>sprites\spRec</sprite>
     <sprite>sprites\spRec2</sprite>
+    <sprite>sprites\spPinata</sprite>
+    <sprite>sprites\spAro</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgCelda</background>
@@ -45,6 +47,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obIntro</object>
+    <object>objects\obPinata</object>
     <object>objects\obControladorBatalla</object>
     <object>objects\obJugador</object>
     <object>objects\obMusica</object>
