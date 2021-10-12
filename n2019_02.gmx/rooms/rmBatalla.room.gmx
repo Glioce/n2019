@@ -62,7 +62,7 @@ cambia el tipo de piñata que se debe destruir.
   </views>
   <instances>
     <instance objName="obControladorBatalla" x="64" y="64" name="inst_1775C8C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obPinata" x="640" y="320" name="inst_48982C63" locked="0" code="" scaleX="0.748549342155457" scaleY="0.75" colour="4294967295" rotation="0"/>
+    <instance objName="obPinata" x="640" y="416" name="inst_48982C63" locked="0" code="" scaleX="0.748549342155457" scaleY="0.75" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

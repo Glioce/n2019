@@ -89,7 +89,23 @@ global.posSigDefinida = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Clic para continuar
+            <string>/// Dibujar rejilla
+// La room mide 1280 x 720
+// La mitad es 640 y 360
+
+draw_set_colour(c_white);
+// lineas verticales en 640 +- 128
+draw_line_width(640 - 128, 64, 640 - 128, 512, 2);
+draw_line_width(640 + 128, 64, 640 + 128, 512, 2);
+// linea horizontal
+draw_line_width(224, 288, 1056, 288, 2);
+// aros
+draw_sprite(spAro, 0, 384, 160);
+draw_sprite(spAro, 0, 640, 160);
+draw_sprite(spAro, 0, 896, 160);
+draw_sprite(spAro, 0, 384, 416);
+draw_sprite(spAro, 0, 640, 416);
+draw_sprite(spAro, 0, 896, 416);
 
 draw_text(x, y, "Prueba de batalla");
 //draw_text(x, y+24, "Presiona cualquier tecla para continuar");
