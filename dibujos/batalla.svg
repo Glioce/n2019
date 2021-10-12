@@ -39,9 +39,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35355339"
-     inkscape:cx="1817.1605"
-     inkscape:cy="478.11796"
+     inkscape:zoom="0.5"
+     inkscape:cx="771.57253"
+     inkscape:cy="459.10412"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -58,7 +58,8 @@
      inkscape:snap-to-guides="false"
      inkscape:snap-bbox="false"
      inkscape:bbox-nodes="true"
-     inkscape:document-rotation="0">
+     inkscape:document-rotation="0"
+     borderlayer="true">
     <inkscape:grid
        type="xygrid"
        id="grid815"
@@ -88,7 +89,7 @@
        style="fill:#000000;stroke:none;stroke-width:0.473014"
        id="rect912"
        width="338.66669"
-       height="186.26668"
+       height="194.73334"
        x="0"
        y="106.49998" />
     <g
@@ -596,43 +597,43 @@
        id="rect1106"
        width="169.33333"
        height="169.33333"
-       x="-203.2"
+       x="-254"
        y="106.49998" />
     <rect
        style="fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.458989"
        id="rect1108"
        width="67.73333"
-       height="50.799999"
-       x="-220.13335"
-       y="106.49998" />
+       height="67.73333"
+       x="-270.93335"
+       y="114.96664" />
     <rect
        style="fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.458989"
        id="rect1110"
        width="67.73333"
-       height="50.799999"
-       x="-152.40001"
-       y="157.29999" />
+       height="67.73333"
+       x="-203.2"
+       y="182.69998" />
     <rect
        style="fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.458989"
        id="rect1112"
        width="67.73333"
-       height="50.799999"
-       x="-84.666672"
-       y="106.49998" />
+       height="67.733322"
+       x="-135.46667"
+       y="114.96664" />
     <rect
        style="fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.458989"
        id="rect1114"
        width="67.73333"
-       height="50.799999"
-       x="-84.666672"
-       y="208.09999" />
+       height="42.333286"
+       x="-135.46667"
+       y="250.43335" />
     <rect
        style="fill:#ffd5d5;fill-opacity:1;stroke:none;stroke-width:0.458989"
        id="rect1116"
        width="67.73333"
-       height="50.799999"
-       x="-220.13335"
-       y="208.09999" />
+       height="42.333347"
+       x="-270.93335"
+       y="250.4333" />
     <image
        width="145.52083"
        height="129.64583"
@@ -649,14 +650,21 @@
        id="image1146"
        x="117.28965"
        y="169.8053" />
+    <rect
+       style="fill:#333333;stroke:none;stroke-width:0.529166;stroke-opacity:1"
+       id="rect949"
+       width="338.66669"
+       height="42.33334"
+       x="-3.35443e-15"
+       y="258.89999" />
     <path
        style="fill:none;stroke:#ffffff;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 127,123.43331 0,118.53334"
+       d="m 135.46667,123.43331 0,118.53334"
        id="path914"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#ffffff;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 211.66667,123.43331 0,118.53334"
+       d="m 203.2,123.43331 0,118.53334"
        id="path916"
        sodipodi:nodetypes="cc" />
     <path
@@ -679,26 +687,26 @@
     <circle
        style="fill:none;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle926"
-       cx="253.78781"
-       cy="216.66901"
+       cx="236.76274"
+       cy="216.57547"
        r="4.2333336" />
     <circle
        style="fill:none;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle928"
-       cx="253.78781"
-       cy="148.19455"
+       cx="236.56007"
+       cy="148.40434"
        r="4.2333336" />
     <circle
        style="fill:none;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle930"
-       cx="93.45031"
+       cx="101.65239"
        cy="216.13983"
        r="4.2333336" />
     <circle
        style="fill:none;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle932"
-       cx="93.45031"
-       cy="147.66537"
+       cx="101.65239"
+       cy="148.59142"
        r="4.2333336" />
     <rect
        style="fill:#000000;stroke:none;stroke-width:0.473014"
@@ -766,5 +774,26 @@
        cx="524.91956"
        cy="148.69063"
        r="4.2333336" />
+    <path
+       style="fill:none;stroke:#ff4a00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 127,123.43331 42.33334,25.4 42.33333,-25.4 25.4,25.4 v 67.73334 l -25.4,25.4 -42.33333,-25.4 -42.33334,25.4 -25.4,-25.4 v -67.73334 z"
+       id="path933"
+       sodipodi:nodetypes="ccccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="114.79134"
+       y="270.97281"
+       id="text937"><tspan
+         sodipodi:role="line"
+         x="114.79134"
+         y="270.97281"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583"
+         id="tspan939">Aldo se enfrenta a</tspan><tspan
+         sodipodi:role="line"
+         x="114.79134"
+         y="284.20193"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:Purisa;-inkscape-font-specification:'Purisa, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583"
+         id="tspan943">piñata de 9 puntas.</tspan></text>
   </g>
 </svg>
