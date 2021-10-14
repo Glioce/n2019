@@ -89,11 +89,18 @@
       <room>rooms\rmMotorCasa</room>
     </rooms>
   </rooms>
-  <constants number="4">
+  <constants number="11">
     <constant name="ESTADO_NORMAL">0</constant>
     <constant name="ESTADO_MUERTO">1</constant>
     <constant name="ESTADO_DIALOGO">2</constant>
     <constant name="ESTADO_PAUSA">3</constant>
+    <constant name="ESTADO_INTRO">0</constant>
+    <constant name="ESTADO_JUEGO">10</constant>
+    <constant name="ESTADO_SELATQ">1</constant>
+    <constant name="ESTADO_SELZONA">2</constant>
+    <constant name="ESTADO_ANIMATQ">3</constant>
+    <constant name="ESTADO_GANA">4</constant>
+    <constant name="ESTADO_DULCES">5</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
