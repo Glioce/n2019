@@ -37,6 +37,8 @@ se inicia un diálogo.
 Es una modificiación de obTxtFx1. Adaptado para recibir el texto
 en el evento create y separar las palabras en una alarma.
 
+También podría tener una forma de asignar la fuente/tipografía.
+
 Texto de ejemplo
 "¡Hola mundo! Este es el texo que usaremos#"+
 "para probar los efectos especiales.##"+

@@ -108,6 +108,26 @@ Aquí se puede usar una función de interpolación
 indicar posición inicial, pos final y duración
 
 */ 
+
+// objeto dummy Aldo
+x0Aldo = 100; //pos inicial de aldo
+y0Aldo = 500;
+x1Aldo = 200; //pos final de aldo
+y1Aldo = 500;
+tAldo = 60; //duración de aparición
+aldo = instance_create(x0Aldo, y0Aldo, obDummy); //instancia vacía
+//aldo.sprite_index = spAldoEspalda; //asignar sprite
+aldo.image_alpha = 0; //inicia transparente/invisible
+
+// objeto dummy piñata
+x0Pina = 100; //pos inicial de aldo
+y0Pina = 500;
+x1Pina = 200; //pos final de aldo
+y1Pina = 500;
+tPina = 60; //duración de aparición
+pina = instance_create(x0Pina, y0Pina, obDummy); //instancia vacía
+pina.sprite_index = spPinata; //asignar sprite
+pina.image_alpha = 0; //inicia transparente/invisible
 </string>
           </argument>
         </arguments>
