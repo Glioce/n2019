@@ -29,6 +29,7 @@
     <sprite>sprites\spRec2</sprite>
     <sprite>sprites\spPinata</sprite>
     <sprite>sprites\spAro</sprite>
+    <sprite>sprites\spAldoEspalda</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgCelda</background>
