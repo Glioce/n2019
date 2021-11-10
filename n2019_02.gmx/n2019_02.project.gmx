@@ -30,6 +30,8 @@
     <sprite>sprites\spPinata</sprite>
     <sprite>sprites\spAro</sprite>
     <sprite>sprites\spAldoEspalda</sprite>
+    <sprite>sprites\spAldoPix1</sprite>
+    <sprite>sprites\spAldoPix4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgCelda</background>
@@ -68,8 +70,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmBatalla</room>
-    <room>rooms\rmMenuPrincipal</room>
     <room>rooms\roomIntro</room>
+    <room>rooms\rmMenuPrincipal</room>
     <room>rooms\rmPoniente</room>
     <room>rooms\rmCasaAldo</room>
     <room>rooms\rmCasaAnciano</room>
