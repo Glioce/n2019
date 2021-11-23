@@ -27,8 +27,8 @@ obPinata = obj_1;
 room_width = 1280;
 room_height = 720;
 background_colour = c_black;
-x = 300;
-y = 300;
+x = 240;
+y = 240;
 pina = instance_create(800, 200, obPinata);
 //pina.image_index = spPina;
 
@@ -46,8 +46,6 @@ ESTADO_JUEGO   = 10;
 
 
 /// Create ====================================================================
-
-draw_set_colour(c_white);
 
 /// Inicializar globales
 
@@ -151,6 +149,10 @@ with(pina)
 }
 */
 draw_sprite(spPina, 0, pina.x, pina.y);
+
+// Barra inferior
+draw_set_colour(c_dkgray);
+draw_rectangle(0, 576, 1280, 720, false);
 
 #define e_intro
 /// Estado intro script
