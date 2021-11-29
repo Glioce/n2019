@@ -18,18 +18,23 @@ sprite_index = spAldo;
 spPina =sprite_add(
     "https://raw.githubusercontent.com/Glioce/n2019/master/n2019_02.gmx/sprites/images/spPinata_0.png",
     1, false, false, 259, 233
-); 
+);
+
+//newfont = font_add( 'Helvetica', 24, true, true, 32, 128);
 
 // Objetos
 obPinata = obj_1;
 
 // Room
+//fps = 30;
+room_speed = 30;
 room_width = 1280;
 room_height = 720;
 background_colour = c_black;
 x = 240;
 y = 240;
 pina = instance_create(800, 200, obPinata);
+device_mouse_dbclick_enable(false);
 //pina.image_index = spPina;
 
 // Estados
@@ -101,19 +106,50 @@ tPina = 60; //duración de aparición
 /// En el step
 switch (estado)
 {
-    case ESTADO_INTRO: e_intro();
-    case ESTADO_SELATQ: e_selatq();
-    
+    case ESTADO_INTRO: eIntroStep(); break;
+    case ESTADO_SELATQ: eSelAtqStep(); break;
     
 }
 //estado = estadoSig;
 
+
 #define draw
+
+switch (estado)
+{
+    case ESTADO_INTRO: eIntroDraw(); break;
+    case ESTADO_SELATQ: eSelAtqDraw(); break;
+}
+
+// Debug
+// dibujar borde de room
+draw_line(0, room_height, room_width, room_height);
+draw_line(room_width, 0, room_width, room_height);
+// mostrar fps
+draw_text(15,0, fps);
+draw_text(15,20, fps_real);
+
+
+#define eIntroDraw
+// Estado intro, evento draw
+
+draw_sprite_ext(spAldo,0, x, y, 1,1,0, c_white, image_alpha);
+draw_sprite_ext(spPina,0, pina.x, pina.y, 1,1,0, c_white, pina.image_alpha);
+
+// Barra inferior
+draw_set_colour(c_dkgray);
+draw_rectangle(0, 576, 1280, 720, false);
+
+draw_set_colour(c_white);
+draw_set_halign(fa_center);
+draw_text_transformed(640, 576, "Aldo se enfrenta a#Pinata de 7 puntas", 2, 2, 0);
+
+
+#define eSelAtqDraw
 /// Dibujar rejilla
 // La room mide 1280 x 720
 // La mitad es 640 y 360
-
-//draw_self();
+// La barra inferior inicia en y576
 
 draw_set_colour(c_white);
 // lineas verticales en 640 +- 128
@@ -131,30 +167,30 @@ draw_sprite(spAro, 0, 640, 416);
 draw_sprite(spAro, 0, 896, 416);
 */
 
-draw_text(0, 0, "Prueba de batalla");
-draw_sprite(spAldo, 0, x, y);
-//draw_text(x, y+24, "Presiona cualquier tecla para continuar");
-
-// dibujar borde de room
-draw_line(0, room_height, room_width, room_height);
-draw_line(room_width, 0, room_width, room_height);
-
-// Draw de piñata
-/*
-with(pina)
-{
-    draw_circle(x, y, 32, true);
-    //draw_self();
-    draw_sprite(spPina, 0, x, y);
-}
-*/
-draw_sprite(spPina, 0, pina.x, pina.y);
-
 // Barra inferior
 draw_set_colour(c_dkgray);
 draw_rectangle(0, 576, 1280, 720, false);
 
-#define e_intro
+// dibujar 4 rectángulos
+// probar valores [320 x 64]
+draw_set_colour(c_white);
+w = 320;
+w2 = w/2;
+h = 48;
+
+draw_rectangle(640 - w, 576, 640, 576 + h, true);
+draw_rectangle(640, 576, 640 + w, 576 + h, true);
+draw_rectangle(640 - w, 576 + h, 640, 576 + h + h, true);
+draw_rectangle(640, 576 + h, 640 + w, 576 + h + h, true);
+
+draw_set_halign(fa_center);
+draw_text_transformed(640 - w2, 576, "Golpe simple", 2, 2, 0);
+draw_text_transformed(640 + w2, 576, "Abanico", 2, 2, 0);
+draw_text_transformed(640 - w2, 576 + h, "Torbellino", 2, 2, 0);
+draw_text_transformed(640 + w2, 576 + h, "Busqueda rapida", 2, 2, 0);
+
+
+#define eIntroStep
 /// Estado intro script
 /* Animación de introducción
 
@@ -166,21 +202,94 @@ Inician transparentes y se hacen visibles al mismo tiempo que se desplazan
 pueden ser 2 objetos vacíos con los sprites correspondientes
 Aquí se puede usar una función de interpolación
 indicar posición inicial, pos final y duración
+
+(x,y) usados en el editor de room parecen buenas coordenadas finales para
+los objetos. Para iniciar la anim. se pueden recorrer 200px a su lado
+correspondiente.
+
+Se usa interpolación lineal para el desplazamiento y la transparencia
+
+El estado puede dividirse en 2 fases (sub-estados)
+En la primera se completan las animacines
+En la segunda se espera la presión de un boton para pasar al siguiente estado
+Si se presiona un botón en la fase 1, pasa automáticamente a la etapa 2
+
 */
 
 
 // Asignar variables iniciales
 if (estadoInicia) {
     estadoInicia = false;
+    fase = 1; //primera fase: animaciones
+    
+    To = 50; //duracion total de la animación
+    t = 0; //momento actual
+    
+    x0Aldo = x - 200; //pos inicial de aldo
+    x1Aldo = x; //pos final de aldo
+    image_alpha = 0; //invisible
+    
+    x0Pina = pina.x + 200; //pos inicial de pinata
+    x1Pina = pina.x; //pos final de pinata
+    pina.image_alpha = 0; //invisible
 }
 
-#define e_selatq
+// En la fase 1 se realizan animaciones
+if (fase == 1)
+{
+    //calcular posicion y transparencia
+    amount = t/To;
+    image_alpha = amount;
+    pina.image_alpha = amount;
+    x = lerp(x0Aldo, x1Aldo, amount);
+    pina.x = lerp(x0Pina, x1Pina, amount);
+    
+    t++; //incrementar tiempo
+    
+    if ((t > To) //si termina anim (tambien de texto)
+    or keyboard_check_pressed(vk_anykey) //o se presiona una tecla
+    or mouse_check_button_pressed(mb_left) //o se presiona un boton del mouse
+    ) {
+        // cambiar fase
+        fase = 2;
+        
+        //asegurar valores finales
+        x = x1Aldo;
+        pina.x = x1Pina;
+        image_alpha = 1;
+        pina.image_alpha = 1;
+    }
+}
+// En la fase 2 se espera una accion para cambiar de estado
+else
+{
+    if keyboard_check_pressed(vk_anykey) //o se presiona una tecla
+    or mouse_check_button_pressed(mb_left) //o se presiona un boton del mouse
+    {
+        // cambiar estado
+        estado = ESTADO_SELATQ;
+        estadoInicia = true;
+    }
+}
+
+
+#define eSelAtqStep
 // Estado seleccionar ataque script
 /* 
 Lista de ataques aparece en la parte inferior de la pantalla
+¿Cuántos ataques se necesitan?
+
+4 ataques parecen buena idea
+
+Recordar que hay una barra de tiempo en la parte superior.
+el jugador debe elegir rápido porque el tiempo es limitado
+
+// La room mide 1280 x 720
+// La mitad es 640 y 360
 */
 
 // Asignar variables iniciales
 if (estadoInicia) {
     estadoInicia = false;
 }
+//newfont = font_add( 'Arial', 24, true, true, 32, 128);
